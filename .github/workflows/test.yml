@@ -1,19 +1,19 @@
 name: CI Tests
 on: [push, pull_request]
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Install Python dependecies
-      uses: VaultVulp/action-pipenv@v2.0.1
+    - uses: actions/setup-python@v2
       with:
-        command: install -d 
-  - name: Lint and Style
-      uses: VaultVulp/action-pipenv@v2.0.1
-      with:
-        command: run lint
-  - name: Test
-      uses: VaultVulp/action-pipenv@v2.0.1
-      with:
-        command: run test
+        python-version: '3.8'
+    - run: "python -m pip install pipenv"
+    - run: "pipenv install -d"
+      name: "Installing project"
+    - name: "Show pipenv scripts"
+      run: "pipenv scripts"
+    - run: "pipenv run lint"
+      name: "Running Format Check"
+    - run: "pipenv run test"
+      name: "Running Tests"
