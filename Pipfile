@@ -9,14 +9,12 @@ bottle = "*"
 [dev-packages]
 pytest = "*"
 flake8 = "*"
+webtest = "*"
 
 [requires]
 python_version = "3.8"
 
 [scripts]
 lint = "bash scripts/lint.sh"
-
 start = "bash scripts/enterypoint.sh"
-
 test = "bash scripts/test.sh"
-

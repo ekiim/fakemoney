@@ -1,3 +1,3 @@
 #!/usr/bin/bash
 echo "testing"
-exit 1
+cd src/ && python -m unittest -v tests/*
