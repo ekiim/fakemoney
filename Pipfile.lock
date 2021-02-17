@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "d8c1e2e507b4ecd87252bb0166234fc6249b8e8dc0e4342911f8bbe90d6552ad"
+            "sha256": "fabf88279d6c52a8a78d82b3ec0992e0f1acbfe226db40c6fb9a727325f5a66f"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -42,6 +42,20 @@
             ],
             "version": "==4.9.3"
         },
+        "cssbeautifier": {
+            "hashes": [
+                "sha256:6be56ccbee28119a94ccabafa299d03e027ead122c7dfd98183e27bb1a8b2a79"
+            ],
+            "index": "pypi",
+            "version": "==1.13.5"
+        },
+        "editorconfig": {
+            "hashes": [
+                "sha256:57f8ce78afcba15c8b18d46b5170848c88d56fd38f05c2ec60dbbfcb8996e89e",
+                "sha256:6b0851425aa875b08b16789ee0eeadbd4ab59666e9ebe728e526314c4a2e52c1"
+            ],
+            "version": "==0.12.3"
+        },
         "flake8": {
             "hashes": [
                 "sha256:749dbbd6bfd0cf1318af27bf97a14e28e5ff548ef8e5b1566ccfb25a11e7c839",
@@ -56,6 +70,13 @@
                 "sha256:bc3af051d7d14b2ee5ef9969666def0cd1a000e121eaea580d4a313df4b37f32"
             ],
             "version": "==1.1.1"
+        },
+        "jsbeautifier": {
+            "hashes": [
+                "sha256:4532a6bc85ba91ffc542b55d65cd13cedc971a934f26f51ed56d4c680b3fbe66"
+            ],
+            "index": "pypi",
+            "version": "==1.13.5"
         },
         "mccabe": {
             "hashes": [

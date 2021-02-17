@@ -10,6 +10,8 @@ bottle = "*"
 pytest = "*"
 flake8 = "*"
 webtest = "*"
+jsbeautifier = "*"
+cssbeautifier = "*"
 
 [requires]
 python_version = "3.8"
@@ -17,4 +19,5 @@ python_version = "3.8"
 [scripts]
 lint = "bash scripts/lint.sh"
 start = "bash scripts/enterypoint.sh"
+www = "bash scripts/serve_html.sh"
 test = "bash scripts/test.sh"
