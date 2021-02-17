@@ -1,4 +1,4 @@
-name: Github Wiki Update 
+name: Github Wiki and Pages Update
 
 on:
   push:
@@ -6,9 +6,8 @@ on:
       - main
 
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v1
       # Additional steps to generate documentation in "Documentation" directory
@@ -18,3 +17,9 @@ jobs:
           path: "wiki"
         env:
           GH_PERSONAL_ACCESS_TOKEN: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+      - name: Publish on Github Pages.
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+          publish_dir: ./www
+          publish_branch: www
