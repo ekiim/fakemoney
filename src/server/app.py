@@ -4,6 +4,7 @@ import json
 import bottle
 
 import server.routes.health
+import server.routes.transactions
 
 logging.basicConfig(
     filename='server.log',
@@ -50,3 +51,4 @@ for error_code in [400, 401, 402, 403, 404, 500]:
 
 
 app.route_mount('/health', server.routes.health.app)
+app.route_mount('/transactions', server.routes.transactions.app)
