@@ -1,8 +1,9 @@
 name: Github Wiki Update 
 
-on: 
+on:
   push:
-    - main
+    branches:
+      - main
 
 jobs:
   build:
