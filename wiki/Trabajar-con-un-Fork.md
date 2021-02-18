@@ -1,10 +1,11 @@
 
 Para iniciar a trabajar con el repositorio, hay que hacer un fork con github, clonar su repositorio y solicitar un pull request cuando terminen de realizar sus cambios.
 
-  - Para crear un fork hay que presionar el boton que dice **Fork** ubicado en la parte superior derecha del repositorio principal.
-  - Hay que asegurarse de estar autenticado en la plataforma de **github**.
-  - Una vez creado el fork ,hay que ubicar el boton que dice **clone** y obtener el link para crear el repositorio con **https**.
-  - Para clonar un repositorio hay que abrir una terminal de **git-bash** , ejecutar la siguiente linea:
+  - ¿Cómo trabajar con **Fork**? En la parte superior derecha del repositorio principal se encuentra un botón **Fork** que hay que presionar.
+  - Para continúar, asegúrese de estar autenticado en la plataforma **GitHub**.
+  - Una vez creado el **Fork**, nos dirijimos a **Mis repositorios** ubicados en perfil y damos click en el repositorio.
+  - Existe un botón en la parte superior derecha de color verde, hacemos click para desglozar las opciones y copiamos el link para crear el repositorio con **HTTPS**.
+  - Dentro de una terminal de **git-bash** ejecutaremos la siguiente línea de comando para clonar el repositorio:
   - `git clone {URL}`
 
 **NOTA**:
