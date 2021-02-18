@@ -46,3 +46,25 @@ Uno puede ejecutar la siguiente linea.
 git config --global core.editor "nano"
 ```
 
+### Evitar conflictos contra la rama principal.
+
+Si presento confictos con la rama principal una manera de resolverlos es hacer un `git rebase`.
+
+Para configurar que los `git pull` por default se comporten como un `rebase`, hay que ejecutar la siguiente linea.
+
+```
+git config --global pull.rebase true
+```
+
+De aqui en adelante uno puede ejecutar 
+
+```
+git pull profe main
+```
+
+Para traer a su rama actual los cambios que se presentan en la rama principal `ekiim:main`.
+
+Cuando se tenga un conflicto entrarán en modo `rebase`, donde tendrán que editar los archivos para conciliar los cambios, y borraran lo no deseado.
+
+Una vez concluida la fase de conciliación de cambios ejecutamos `git add` para informarle a `git` de esto, y ejecutamos un `git rebase --continue`.
+
