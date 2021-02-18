@@ -3,6 +3,9 @@ on: [push, pull_request]
 jobs:
   test:
     runs-on: ubuntu-latest
+    env:
+      APP_SECRET: some_complicated_secret
+      STORAGE_DIR: /tmp/fakemoney_storage
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-python@v2
