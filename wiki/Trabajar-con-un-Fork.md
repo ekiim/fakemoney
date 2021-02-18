@@ -1,7 +1,7 @@
 Para iniciar a trabajar con el repositorio, hay que hacer un fork con github, clonar su repositorio y solicitar un pull request cuando terminen de realizar sus cambios.
 
-**NOTA**
-Es importante estar dentro del repositorio fakemoney para correr los comandos o rutas!
+**NOTA**:
+!Es importante estar dentro del repositorio fakemoney para correr los comandos o rutas!
 
 Para mantener sus _branch_ al día con el proyecto principal es útil ejecutar las siguientes líneas en la terminal de git. 
 
@@ -10,7 +10,7 @@ Esta línea les permitirá observar los cambios que se realicen en el branch pri
 git remote add profe https://github.com/ekiim/fakemoney.git
 ```
 
-Después deberán hacer para obtener los cambios mas recientes en la rama principal. 
+Después lo que deberán hacer para obtener los cambios mas recientes en la rama principal.
 
 ```
 git pull profe main
