@@ -1,12 +1,13 @@
 
 Para iniciar a trabajar con el repositorio, hay que hacer un fork con github, clonar su repositorio y solicitar un pull request cuando terminen de realizar sus cambios.
-
+  - ¿Qué es un **Fork**? En el ámbito del desarrollo de software, es la creación de un proyecto en una dirección distinta de la principal u oficial tomando el código fuente del proyecto ya existente.
   - ¿Cómo trabajar con **Fork**? En la parte superior derecha del repositorio principal se encuentra un botón **Fork** que hay que presionar.
-  - Para continúar, asegúrese de estar autenticado en la plataforma **GitHub**.
-  - Una vez creado el **Fork**, nos dirijimos a **Mis repositorios** ubicados en perfil y damos click en el repositorio.
-  - Existe un botón en la parte superior derecha de color verde, hacemos click para desglozar las opciones y copiamos el link para crear el repositorio con **HTTPS**.
+  - Para poder continúar, debemos estar autenticados en la plataforma **GitHub**.
+  - Una vez que se creo el **Fork**, nos dirijimos a **Mis repositorios** ubicados en perfil y damos click en el repositorio.
+  - A continuación hay un botón en la parte superior derecha de color verde, hacemos click para que muestre las opciones y copiamos el link para crear el repositorio con **HTTPS**.
   - Dentro de una terminal de **git-bash** ejecutaremos la siguiente línea de comando para clonar el repositorio:
   - `git clone {URL}`
+
 
 **NOTA**:
 !Es importante estar dentro del repositorio fakemoney para correr los comandos o rutas!
