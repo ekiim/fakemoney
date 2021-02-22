@@ -2,8 +2,6 @@ name: Github Wiki and Pages Update
 
 on:
   push:
-    paths:
-      - docs
     branches:
       - main
 

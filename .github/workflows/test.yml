@@ -1,13 +1,5 @@
 name: CI Tests
-on: 
-  push:
-    paths:
-      - src
-      - scripts
-  pull_request:
-    paths:
-      - src
-      - scripts
+on: [push, pull_request]
 jobs:
   test:
     runs-on: ubuntu-latest
