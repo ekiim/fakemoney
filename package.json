@@ -1,0 +1,12 @@
+{
+  "name": "fakemoney",
+  "version": "0.0.0",
+  "description": "Este proyecto es un banco digital para dinero falso.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@vue/cli": "^4.5.11",
+    "mermaid.cli": "^0.5.1"
+  }
+},
