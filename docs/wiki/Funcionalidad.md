@@ -1,6 +1,5 @@
-# Funcionalidad
-
-> Este documento es una obra en progreso.
+ 
+> Este documento es una obra en proceso.
 > Correcciones son bienvenidas
 
 
