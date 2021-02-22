@@ -117,7 +117,7 @@ Una transacción se estructura de la siguiente manera:
         "human_reference": "Descripcion de la transaccion",
         "id": "UUID",
         "status": "fail"
-    }
+    },
     "concept": {
         "items": [ ],
         "deposit": { }
@@ -128,7 +128,7 @@ Una transacción se estructura de la siguiente manera:
         "user_session_token": "{user_session_token}",
         "last_transaction": {
             "$ref": "transactions/{transaction_file_name}"
-        }
+        },
         "last_balance": 11000,
         "new_balance": 1000
     },
@@ -137,7 +137,7 @@ Una transacción se estructura de la siguiente manera:
         "user": "{authorizing_user_base64email}",
         "last_transaction": {
             "$ref": "transactions/{transaction_file_name}"
-        }
+        },
         "last_balance": 10000,
         "new_balance": 20000
     }
