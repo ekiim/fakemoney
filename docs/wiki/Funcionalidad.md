@@ -55,26 +55,26 @@ estructura.
 
 ```json
 {
-    email: "user@example.com",
-    phone: "+526649999999",
-    password_md5: "{md5_for_password}",
-    picture: {
-        url: "https://{somedomain}/route/to/picture",
-        filename: "nombre_del_archivo.jpg"
+    "email": "user@example.com",
+    "phone": "+526649999999",
+    "password_md5": "{md5_for_password}",
+    "picture": {
+        "url": "https://{somedomain}/route/to/picture",
+        "filename": "nombre_del_archivo.jpg"
     },
-    personal_data: {
+    "personal_data": {
         "first": "José",
         "middle": "José",
         "lastname_1": "Sosa",
         "lastname_2": "Ortiz",
         "birthdate": "1948-02-17"
     },
-    accounts: ["account_id", "account_id"],
-    comments: [
+    "accounts": ["account_id", "account_id"],
+    "comments": [
         {"timestamp": 1613952000, "comment": "Cadena de texto en Markdown"},
         {"timestamp": 1613952100, "comment": "Cadena de texto en Markdown"},
     ],
-    admin_comments: [
+    "admin_comments": [
         {"timestamp": 1613952000, "type": "complaint", "comment": "Cadena de texto en Markdown"},
         {"timestamp": 1613952100, "type": "support", "comment": "Cadena de texto en Markdown"},
     ]
@@ -88,18 +88,18 @@ La estructuras deberá ser la siguiente:
 
 ```json
 {
-    created_time: "2021-02-22T00:00:00-08:00"
-    id: "UUID",
-    picture: {
-        url: "https://{somedomain}/route/to/picture",
-        filename: "nombre_del_archivo.jpg"
+    "created_time": "2021-02-22T00:00:00-08:00"
+    "id": "UUID",
+    "picture": {
+        "url": "https://{somedomain}/route/to/picture",
+        "filename": "nombre_del_archivo.jpg"
     },
-    owner: "users base64_email",
-    users: [
+    "owner": "users base64_email",
+    "users": [
         "users base64_email",
         "users base64_email",
     ],
-    blocked: false
+    "blocked": false
 }
 ```
 
@@ -111,36 +111,36 @@ Una transacción se estructura de la siguiente manera:
 
 ```json
 {
-    general: {
-        from: "account_id",
-        to: "account_id",
-        amount: 10000,
-        human_reference: "Descripcion de la transaccion",
-        id: "UUID",
-        status: "fail"
+    "general": {
+        "from": "account_id",
+        "to": "account_id",
+        "amount": 10000,
+        "human_reference": "Descripcion de la transaccion",
+        "id": "UUID",
+        "status": "fail"
     }
-    concept: {
-        items: [ ],
-        deposit: { }
+    "concept": {
+        "items": [ ],
+        "deposit": { }
     },
-    account_from: {
-        account: "account_id",
-        user: "{authorizing_user_base64email}",
-        user_session_token: "{user_session_token}",
-        last_transaction: {
+    "account_from": {
+        "account": "account_id",
+        "user": "{authorizing_user_base64email}",
+        "user_session_token": "{user_session_token}",
+        "last_transaction": {
             "$ref": "transactions/{transaction_file_name}"
         }
-        last_balance: 11000,
-        new_balance: 1000
+        "last_balance": 11000,
+        "new_balance": 1000
     },
-    account_to: {
-        account: "account_id",
-        user: "{authorizing_user_base64email}",
-        last_transaction: {
+    "account_to": {
+        "account": "account_id",
+        "user": "{authorizing_user_base64email}",
+        "last_transaction": {
             "$ref": "transactions/{transaction_file_name}"
         }
-        last_balance: 10000,
-        new_balance: 20000
+        "last_balance": 10000,
+        "new_balance": 20000
     }
 }
 ```
@@ -161,11 +161,11 @@ conocidas de la cuenta en cuestión, su estructura es de la siguiente forma:
 
 ```json
 {
-    account_id: "{account_id}",
-    created_time: "2021-02-22T00:00:00-08:00",
-    created_timestamp: 1613952000,
-    balance: 111000,
-    transactions: [
+    "account_id": "{account_id}",
+    "created_time": "2021-02-22T00:00:00-08:00",
+    "created_timestamp": 1613952000,
+    "balance": 111000,
+    "transactions": [
         {"$ref": "transactions/{transaction_file}"},
         {"$ref": "transactions/{transaction_file}"},
         {"$ref": "transactions/{transaction_file}"},
@@ -203,16 +203,16 @@ y responder al usuario con dicho estado de cuenta.
 > La especificación de rutas `HTTP` esta pendiente, sera publicada en formato [_swagger_](https://editor.swagger.io/?_ga=2.171413088.198606485.1613980871-657578984.1613980871)
 
 
-![Registro de usuarios](assets/sequence-user-signup.svg)
+![Registro de usuarios](https://github.com/ekiim/fakemoney/blob/main/docs/wiki/assets/sequence-user-signup.svg)
 
 ---
 
-![Autenticación de Usuarios](assets/sequence-user-login.svg)
+![Autenticación de Usuarios](https://github.com/ekiim/fakemoney/blob/main/docs/wiki/assets/sequence-user-login.svg)
 
 ---
 
-![Consulta de estado de cuenta](assets/sequence-account-statement.svg)
+![Consulta de estado de cuenta](https://github.com/ekiim/fakemoney/blob/main/docs/wiki/assets/sequence-account-statement.svg)
 
 ---
 
-![Transacción Usuario a Usuario](assets/sequence-transaction.svg)
+![Transacción Usuario a Usuario](https://github.com/ekiim/fakemoney/blob/main/docs/wiki/assets/sequence-transaction.svg)
