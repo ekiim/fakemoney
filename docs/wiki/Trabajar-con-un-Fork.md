@@ -35,6 +35,10 @@ git push
 
 Asi sus cambios se veran reflejados en su pagina de github, `https://github.com/{nombre de usuario}/fakemoney`
 
+```
+git status
+```
+El comando git status muestra el estado del directorio de trabajo y del área del entorno de ensayo. Permite ver los cambios que se han preparado, los que no y los archivos en los que Git no va a realizar el seguimiento.
 
 ### Cambiar de editor de texto a NANO.
 
@@ -69,4 +73,6 @@ Para traer a su rama actual los cambios que se presentan en la rama principal `e
 Cuando se tenga un conflicto entrarán en modo `rebase`, donde tendrán que editar los archivos para conciliar los cambios, y borraran lo no deseado.
 
 Una vez concluida la fase de conciliación de cambios ejecutamos `git add` para informarle a `git` de esto, y ejecutamos un `git rebase --continue`.
+
+
 
