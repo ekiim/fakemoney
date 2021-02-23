@@ -1,10 +1,8 @@
-======================================= PASOS A SEGUIR PARA CREAR UN DOCUMENTO MARKDOWN.MD ===============================================
+===================================== PROCEDIMIENTO PARA CREAR UN DOCUMENTO .MD ===============================================
 
-+ Antes de iniciar con este procedimiento debemos tener claro que es un archivo .md 
++ Antes de iniciar con este procedimiento debemos saber que es un archivo .md 
 
-+ ¿Que es un archivo .md? Un archivo .md es un documento de texto simple que no contiene ningún otro elemento. En él, pueden introducirse símbolos en el texto para definir el formato de ciertas secciones. Por ejemplo, puedes poner en negrita una palabra o sección colocando dos asteriscos antes y después de esta.
-
-+ Para iniciar a crear un md que es básicamente un archivo de texto.
++ Un archivo .md es un documento de texto simple que no contiene ningún otro elemento. En él, pueden introducirse símbolos en el texto para definir el formato de ciertas secciones. Por ejemplo, puedes poner en negrita una palabra o sección colocando dos asteriscos antes y después de esta, básicamente es un archivo de texto
 
 1 - Primero se debe verificar que no se tenga clonado el proyecto a partir del repositorio propio y no el del profesor. Para verificar esto debes ejecutar el siguiente comando dentro de la carpeta donde tienes el proyecto clonado
 
