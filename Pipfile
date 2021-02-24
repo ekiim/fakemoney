@@ -7,11 +7,8 @@ name = "pypi"
 bottle = "*"
 
 [dev-packages]
-pytest = "*"
 flake8 = "*"
 webtest = "*"
-jsbeautifier = "*"
-cssbeautifier = "*"
 
 [requires]
 python_version = "3.8"
