@@ -2,7 +2,7 @@ import bottle
 
 app = bottle.Bottle()
 
-# /transactions/<transaction_id>
+
 @app.get("/<transaction_id>")
 def transactions_get_by_id(transaction_id):
     return {
