@@ -66,7 +66,7 @@ class TestFileCollectionsStorage(unittest.TestCase):
             self.initial_record_name,
             self.storage_filled
         )
-        retrieve_keys_count = len(retrieve_data.keys()
+        retrieve_keys_count = len(retrieve_data.keys())
         wanted_keys_count = len(self.initial_record_data.keys())
         assert retrieve_keys_count == wanted_keys_count
         for (key, value) in self.initial_record_data.items():
