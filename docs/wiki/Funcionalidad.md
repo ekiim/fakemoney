@@ -87,7 +87,7 @@ La estructuras deberá ser la siguiente:
 
 ```json
 {
-    "created_time": "2021-02-22T00:00:00-08:00"
+    "created_time": "2021-02-22T00:00:00-08:00",
     "id": "UUID",
     "picture": {
         "url": "https://{somedomain}/route/to/picture",
