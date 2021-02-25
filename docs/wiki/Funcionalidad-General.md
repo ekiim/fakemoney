@@ -49,6 +49,10 @@ del archivo `.json` en caso de ser parte de una colección que almacene archivos
  - Transacciones: `{timestamp}-{from_account_id}-{to_account_id}.json`
  - Imágenes de las cuentas: `{asset_md5hash}.jpg`
 
+> Issues Relacionados con estos aspectos.
+> - https://github.com/ekiim/fakemoney/issues/64
+>
+
 Para el registro y manejo de usuarios, deberemos crear y consultar archivos con la siguiente
 estructura.
 
