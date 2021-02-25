@@ -2,7 +2,7 @@ from shutil import rmtree
 from os import makedirs
 import json
 import unittest
-import server.modules.storage as storage
+import filestorage.storage as storage
 
 
 class TestFileCollectionsStorage(unittest.TestCase):
