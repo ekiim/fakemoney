@@ -6,7 +6,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@vue/cli": "^4.5.11",
     "mermaid.cli": "^0.5.1"
   }
 },
