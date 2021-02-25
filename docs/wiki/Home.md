@@ -12,6 +12,15 @@ Para descargar el proyecto uno puede ejecutar la siguiente linea, y esto descarg
 git clone git@github.com:ekiim/fakemoney.git
 ```
 
+Para configurar el ambiente debemos definir el archivo de variables de entorno locales del proyecto, `.env`. Una copia de ejemplo existe, nombrada `example.env`, para iniciar a trabajar copiamos el archivo con el comando:
+```
+cp example.env .env
+```
+
+Después editamos el archivo `.env` para que la variable `STORAGE_DIR` esa una un valor valido en su ambiente.
+
+> Si están corriendo `pipenv` desde `git-bash` pueden dejar el valor default.
+
 Para validar que su ambiente funciona correctamente uno puede ejecutar las siguientes dos lineas. 
 
 ```sh
