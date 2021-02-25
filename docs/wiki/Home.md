@@ -21,7 +21,18 @@ pipenv run test
 
 Esto instalara las dependencias del proyecto y ejecutara las pruebas automatizadas del proyecto.
 
-Para iniciar desarrollo uno puede editar lo que corresponda, y finalmente ejecutar.
+Para iniciar desarrollo uno puede editar lo que corresponda y ejecutar el servidor del `api` con el comando
+
+```
+pipenv run start
+```
+
+Para ejecutar el servidor del cliente, uno puede ejecutar:
+```
+pipenv run www
+```
+
+,y finalmente ejecutar, para verificar el estilo de sus archivos de python, uno debe ejecutar:
 
 ```sh
 pipenv run lint
