@@ -50,7 +50,7 @@ del archivo `.json` en caso de ser parte de una colección que almacene archivos
  - Imágenes de las cuentas: `{asset_md5hash}.jpg`
 
 > Issues Relacionados con estos aspectos.
-> - [Manejo de Usuarios](GH-64)
+> - [Manejo de Usuarios](https://github.com/ekiim/fakemoney/issues/64)
 >
 
 Para el registro y manejo de usuarios, deberemos crear y consultar archivos con la siguiente
