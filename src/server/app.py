@@ -20,6 +20,8 @@ class BottleGlass(bottle.Bottle):
 
     Para el resto de los metodos de esta clase, dirigirse a
     la documentacion de `bottle.Bottle`.
+    
+    Pagina oficial de Bottle.py: https://bottlepy.org/
     """
     def route_mount(self, prefix, _app=None, routes=[]):
         if _app and isinstance(_app, bottle.Bottle):
