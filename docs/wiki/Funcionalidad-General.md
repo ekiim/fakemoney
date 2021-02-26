@@ -1,7 +1,5 @@
- 
 > Este documento es una obra en proceso.
 > Correcciones son bienvenidas
-
 
 Este proyecto es un banco para dinero falso, en el cual registraremos
 usuarios, y cada usuario tendrá acceso a al menos una cuenta bancaria,
