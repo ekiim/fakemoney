@@ -45,9 +45,12 @@ class url:
     @staticmethod
     def validate(_url):
         returnable = False
-        parsed = urlparse(_url)
-        if len(parsed.scheme) in [4,5] and parsed.scheme in 'https':
-            returnable = True
+        try:
+            parsed = urlparse(_url)
+            if len(parsed.scheme) in [4,5] and parsed.scheme in 'https':
+                returnable = True
+        except:
+            pass
         return returnable
 
 class birthdate:
