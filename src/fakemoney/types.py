@@ -1,8 +1,41 @@
-import re
-from urllib.parse import urlparse
+from os import environ
 from datetime import date
+from time import time
+from urllib.parse import urlparse
+import re
+import uuid
 
-builtins = [str, int, float]
+builtins = [str, int, float, bool]
+
+from fakemoney.types import builtins
+
+def nested_dict_get(agregated, current):
+    return agregated.get(current, None)
+
+def single_value_validate(value, _type):
+    valid_check = True
+    if value is None:
+        valid_check = False
+    elif _type in builtins:
+        valid_check &= value == _type(value)
+    else:
+        valid_check &= _type.validate(value)
+    return valid_check
+
+def isValidConstructor(fields={}):
+    def isValid(data={}):
+        valid_check = bool(len(fields))
+        for (key, _type) in fields.items():
+            try:
+                value = data[key]
+                valid_check &= single_value_validate(value, _type)
+                del data[key]
+            except KeyError:
+                valid_check = False
+                break
+        return (len(data.keys()) == 0) and valid_check
+    return isValid
+
 
 class email:
     regex = r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)"
@@ -67,3 +100,44 @@ class str_nonempty(str):
         except:
             pass
         return returnable
+
+class ref_base64:
+    @staticmethod
+    def validate(_ref):
+        return False
+
+
+class UUID:
+    @staticmethod
+    def validate(_uuid):
+        returnable = False
+        try:
+            _uuid_regen = uuid.UUID(str(_uuid))
+            returnable = _uuid == _uuid_regen
+        except:
+            pass
+        return returnable
+
+    @staticmethod
+    def create(_path, timestamp=None, _collection=None):
+        if timestamp is None:
+            timestamp = time()
+        if _collection is None:
+            collection = "generic"
+        namespace = uuid.NAMESPACE_URL
+        _url = "/".join([
+            environ["DEPLOY_DOMAIN"],
+            str(timestamp),
+            str(_path)
+        ])
+        return uuid.uuid3(namespace, _url)
+
+def list_of(_type):
+    class list_of_type:
+        @staticmethod
+        def validate(_list):
+            valid_check = True
+            for elem in _list:
+                valid_check &= single_value_validate(elem, _type)
+            return valid_check
+    return list_of_type

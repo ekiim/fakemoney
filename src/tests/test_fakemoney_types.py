@@ -1,4 +1,5 @@
 import unittest
+import uuid
 from datetime import date
 import fakemoney.types
 
@@ -85,3 +86,44 @@ class TestFakeMoneyTypes(unittest.TestCase):
         _str = None
         valid = fakemoney.types.str_nonempty.validate(_str)
         assert valid == False
+
+    def test_list_of_builtin_str_valid(self):
+        _type = fakemoney.types.list_of(str)
+        assert _type.validate(["hello"]) == True
+
+    def test_uuid_create_full(self):
+        _path = 'path'
+        timestamp = 1614397097.4951427
+        _collection = 'default'
+        _uuid = fakemoney.types.UUID.create(
+            'path',
+            timestamp=timestamp,
+            _collection=_collection
+        )
+        assert isinstance(_uuid, uuid.UUID)
+
+    def test_uuid_create_no_collection(self):
+        _path = 'path'
+        timestamp = 1614397097.4951427
+        _uuid = fakemoney.types.UUID.create(
+            'path',
+            timestamp=timestamp,
+        )
+        assert isinstance(_uuid, uuid.UUID)
+
+    def test_uuid_create_no_time(self):
+        _path = 'path'
+        _collection = 'default'
+        _uuid = fakemoney.types.UUID.create(
+            'path',
+            _collection=_collection
+        )
+        assert isinstance(_uuid, uuid.UUID)
+
+    def test_uuid_validate_valid(self):
+        _uuid = uuid.uuid4()
+        assert fakemoney.types.UUID.validate(_uuid) == True
+
+    def test_uuid_validate_invalid(self):
+        _uuid = "not-a-uuid"
+        assert fakemoney.types.UUID.validate(_uuid) == False
