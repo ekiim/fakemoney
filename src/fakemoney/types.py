@@ -1,5 +1,8 @@
 import re
 from urllib.parse import urlparse
+from datetime import date
+
+builtins = [str, int, float]
 
 class email:
     regex = r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)"
@@ -46,3 +49,9 @@ class url:
         if len(parsed.scheme) in [4,5] and parsed.scheme in 'https':
             returnable = True
         return returnable
+
+class birthdate:
+    @staticmethod
+    def validate(_date):
+        return isintance(_date, date)
+
