@@ -91,6 +91,31 @@ class TestFakeMoneyTypes(unittest.TestCase):
         _type = fakemoney.types.list_of(str)
         assert _type.validate(["hello"]) == True
 
+    def test_list_of_builtin_str_valid_multiple(self):
+        _type = fakemoney.types.list_of(str)
+        assert _type.validate(["hello", "world"]) == True
+
+    def test_list_of_builtin_str_invalid(self):
+        _type = fakemoney.types.list_of(str)
+        assert _type.validate([1]) == False
+
+    def test_list_of_builtin_str_invalid_multiple_at_start(self):
+        _type = fakemoney.types.list_of(str)
+        assert _type.validate([1, "hello"]) == False
+
+    def test_list_of_builtin_str_invalid_multiple_not_at_start(self):
+        _type = fakemoney.types.list_of(str)
+        assert _type.validate(["hello", 1]) == False
+
+    def test_list_of_custom_email_valid(self):
+        _type = fakemoney.types.list_of(fakemoney.types.email)
+        assert _type.validate(["info@ekiim.xyz"]) == True
+
+    def test_list_of_custom_email_invalid(self):
+        _type = fakemoney.types.list_of(fakemoney.types.email)
+        assert _type.validate(["not-an-email"]) == False
+
+
     def test_uuid_create_full(self):
         _path = 'path'
         timestamp = 1614397097.4951427
