@@ -1,12 +1,11 @@
 import fakemoney.defaults
 import fakemoney.types as types
-import fakemoney.utils as utils
 
 
 fields = { "url": types.url, "filename": str }
 
 
-validate = utils.isValidConstructor(fields)
+validate = types.isValidConstructor(fields)
 
 
 def create(url=None, filename=None):

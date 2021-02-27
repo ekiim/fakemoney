@@ -101,12 +101,6 @@ class str_nonempty(str):
             pass
         return returnable
 
-class ref_base64:
-    @staticmethod
-    def validate(_ref):
-        return False
-
-
 class UUID:
     @staticmethod
     def validate(_uuid):

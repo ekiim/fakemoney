@@ -1,4 +1,3 @@
-import fakemoney.utils as utils
 import fakemoney.types as types
 
 
@@ -11,7 +10,7 @@ fields = {
 }
 
 
-validate = utils.isValidConstructor(fields)
+validate = types.isValidConstructor(fields)
 
 
 def create(
