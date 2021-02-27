@@ -28,7 +28,6 @@ class TestFakeMoneyTypesPictures(unittest.TestCase):
         assert picture_data['url'] is fakemoney.defaults.picture
         assert picture_data['filename'] == 'image.png'
 
-
     def test_validate_valid(self):
         url = 'https://test/image.png'
         filename = "test.png"

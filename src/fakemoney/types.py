@@ -56,5 +56,14 @@ class url:
 class birthdate:
     @staticmethod
     def validate(_date):
-        return isintance(_date, date)
+        return isinstance(_date, date)
 
+class str_nonempty(str):
+    @staticmethod
+    def validate(_str):
+        returnable = False
+        try:
+            returnable = len(_str.replace(" ","")) and str(_str) == _str
+        except:
+            pass
+        return returnable

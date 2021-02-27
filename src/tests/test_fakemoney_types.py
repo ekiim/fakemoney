@@ -1,4 +1,5 @@
 import unittest
+from datetime import date
 import fakemoney.types
 
 
@@ -51,6 +52,36 @@ class TestFakeMoneyTypes(unittest.TestCase):
         valid = fakemoney.types.url.validate("http://ekiim.xyz/")
         assert valid
 
-    def test_url_valid_scheme_http(self):
+    def test_url_valid_scheme_https(self):
         valid = fakemoney.types.url.validate("https://ekiim.xyz/")
         assert valid
+
+    def test_birthdate_valid(self):
+        _date = date(1994,12,23)
+        valid = fakemoney.types.birthdate.validate(_date)
+        assert valid
+
+    def test_birthdate_invalid(self):
+        _date = "1994/12/23"
+        valid = fakemoney.types.birthdate.validate(_date)
+        assert valid == False
+
+    def test_str_nonempty_valid(self):
+        _str = "Test"
+        valid = fakemoney.types.str_nonempty.validate(_str)
+        assert valid
+
+    def test_str_nonempty_valid_spaces(self):
+        _str = "   "
+        valid = fakemoney.types.str_nonempty.validate(_str)
+        assert valid == False
+
+    def test_str_nonempty_invalid_by_len(self):
+        _str = ""
+        valid = fakemoney.types.str_nonempty.validate(_str)
+        assert valid == False
+
+    def test_str_nonempty_invalid_by_type(self):
+        _str = None
+        valid = fakemoney.types.str_nonempty.validate(_str)
+        assert valid == False

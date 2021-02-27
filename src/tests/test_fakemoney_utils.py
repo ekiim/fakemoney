@@ -59,12 +59,6 @@ class TestFakeMoneyUtils(unittest.TestCase):
         data = {"name": "Alejandro", "age": 26, "score": 9.75}
         assert is_valid_func(data) == True
 
-    def test_is_valid_constructor_call_fields_builtin_data_valid_int_float(self):
-        fields = { "name": str, "age": int, "score": float}
-        is_valid_func = fakemoney.utils.isValidConstructor(fields)
-        data = {"name": "Alejandro", "age": 26, "score": 9.75}
-        assert is_valid_func(data) == True
-
     def test_is_valid_constructor_call_fields_custom_data_valid(self):
         fields = { "name": str, "age": int, "score": float, "email": email}
         is_valid_func = fakemoney.utils.isValidConstructor(fields)
