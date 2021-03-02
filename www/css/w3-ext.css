@@ -59,3 +59,8 @@ visibility: visible;
 }
 .flowContainer .flowControlNext {
 }
+
+#drawer > div {
+    display: flex !important;
+    flex-direction: column-reverse;
+}

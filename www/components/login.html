@@ -38,14 +38,14 @@ function LoginPhoneFlow() {
     const flowRoot = document.querySelector(".flowContainer");
     const flowSteps = Array.from(
         flowRoot.querySelectorAll('.flowStep')
-    ).map(step => console.log(step.dataset) || step ).filter(step => step.dataset.flow === 'login-phone');
+    ).filter(step => step.dataset.flow === 'login-phone');
     FlowInit(flowRoot, flowSteps);
 }
 function LoginEmailFlow() {
     const flowRoot = document.querySelector(".flowContainer");
     const flowSteps = Array.from(
         flowRoot.querySelectorAll('.flowStep')
-    ).map(step => console.log(step.dataset) || step ).filter(step => step.dataset.flow === 'login-email');
+    ).filter(step => step.dataset.flow === 'login-email');
     FlowInit(flowRoot, flowSteps);
 }
 Array.from(document.querySelectorAll("a.action")).map(anchor => {
