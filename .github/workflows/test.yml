@@ -17,6 +17,8 @@ jobs:
     env:
       APP_SECRET: some_complicated_secret
       STORAGE_DIR: /tmp/fakemoney_storage
+      DEPLOY_DOMAIN: fakemoney.ekiim.xyz
+      DEPLOY_API_DOMAIN: api.fakemoney.ekiim.xyz
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-python@v2
