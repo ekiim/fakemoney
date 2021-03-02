@@ -1,55 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Fakemoney - Login</title>
+<title>Fakemoney - Signup</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/css/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
-
+<link rel="stylesheet" href="/css/w3-ext.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+<script src="/js/w3.js"></script>
+<script src="/js/w3-custom.js"></script>
+<style>
+body > .w3-row > .w3-half, .flowLauncher > .w3-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-content: center;
+    align-items: stretch;
+    grid-gap: 1em;
+}
+.flowLauncher > .w3-container a {
+    width: 100%;
+}
+</style>
 </head>
-<body class="w3-content" style="max-width:1300px">
-
+<body class="w3-content w3-blue-grey " style="max-width:1300px">
 <!-- First Grid: Logo & About -->
-<div class="w3-row">
-  <div class="w3-half w3-black w3-container w3-center" style="height:100vh">
-    <div class="w3-padding-64">
-      <h1>My Logo</h1>
+<div class="w3-row w3-center">
+  <div class="w3-half w3-black w3-container w3-center w3-hide-small" style="min-height:100vh">
+    <div class="">
+      <h1>Login</h1>
     </div>
-    <div class="w3-padding-64">
-      <a href="#" class="w3-button w3-black w3-block w3-hover-blue-grey w3-padding-16">Home</a>
-      <a href="#" class="w3-button w3-black w3-block w3-hover-teal w3-padding-16">My Work</a>
-      <a href="#" class="w3-button w3-black w3-block w3-hover-dark-grey w3-padding-16">Resume</a>
-      <a href="#" class="w3-button w3-black w3-block w3-hover-brown w3-padding-16">Contact</a>
+    <div class="">
+      <a class="w3-button w3-black w3-hover-blue-grey" href="/" >Home</a>
+      <a class="w3-button w3-black w3-hover-blue-grey" href="/login.html" >Login</a>
+      <p>Sign Up form</p>
     </div>
   </div>
-  <div class="w3-half w3-blue-grey w3-container" style="height:100vh">
-    <div class="w3-padding-64 w3-center">
-      <h1>Log in</h1>
-      <div class="w3-left-align w3-padding-large">
-      <div class="w3-center"><br>
-        <img src="/assets/avatar3.png" alt="Avatar" style="width:30%" class="w3-circle w3-margin-top">
-      </div>
-
-      <form class="w3-container">
-        <div class="w3-section">
-          <label><b>Username</b></label>
-          <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter Username" name="usrname" required>
-          <label><b>Password</b></label>
-          <input class="w3-input w3-border" type="password" placeholder="Enter Password" name="psw" required>
-          <button class="w3-button w3-block w3-green w3-section w3-padding" type="submit">Login</button>
-          <input class="w3-check w3-margin-top" type="checkbox" checked="checked"> Remember me
-        </div>
-      </form>
-      <div class="w3-container w3-padding-16">
-        <a class="w3-button w3-green">Sign Up</a>
-        <span class="w3-right w3-padding w3-hide-small">Forgot <a href="#">password?</a></span>
-      </div>
-      </div>
-    </div>
+  <div class="w3-half w3-container" style="min-height:100vh" w3-include-html="/components/login.html">
+      <div class="loader"></div>
   </div>
 </div>
 
+<script> 
+    w3.includeHTML(includeHTMLCallback)
+</script>
 </body>
 </html>
+

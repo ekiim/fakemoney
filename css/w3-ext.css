@@ -1,0 +1,66 @@
+*[w3-include-html] {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.flowContainer > * {
+  transition: all 1s;
+  overflow-y: auto;
+  max-height: 100%;
+}
+
+.flowContainer .flowStep,
+.flowContainer .flowSteps,
+.flowContainer .flowLauncher.hide {
+height: 0;
+opacity: 0;
+visibility: hidden;
+}
+
+.flowContainer .flowLauncher, 
+.flowContainer .flowSteps.show,
+.flowContainer .flowStep.show {
+height: auto;
+opacity: 1;
+visibility: visible;
+}
+.flowContainer .flowControlBack {
+}
+.flowContainer .flowControlNext {
+}
+
+#drawer > div {
+    display: flex !important;
+    flex-direction: column-reverse;
+}

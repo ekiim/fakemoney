@@ -1,0 +1,28 @@
+<div class="w3-bar w3-theme-d2 w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="#" id="top-nav-menu-trigger">
+        <i class="fa fa-bars"></i>
+    </a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-theme-d4">
+        <i class="fa fa-home w3-margin-right"></i>Logo
+    </a>
+    <div class="w3-hide-small" w3-include-html="/components/auth-nav-links.html"></div>
+</div>
+<div class="w3-sidebar w3-hide-medium w3-hide-large w3-bar-block w3-dark-grey w3-animate-right" style="right:0;display:none" id="drawer">
+    <div w3-include-html="/components/auth-nav-links.html"></div>
+</div>
+<script data-execution="pending">
+console.log("top nav");
+document.getElementById("top-nav-menu-trigger").addEventListener('click', (e) => {
+    const drawer = document.getElementById("drawer");
+    if (drawer.style.display == 'block') {
+        drawer.style.minWidth = "0vw";
+        drawer.style.maxWidth ="0vw";
+        drawer.style.display = "none";
+    }
+    else if (drawer.style.display == 'none') {
+    drawer.style.minWidth = "25vw";
+    drawer.style.maxWidth ="35vw";
+    drawer.style.display = "block";
+    }
+});
+</script>
