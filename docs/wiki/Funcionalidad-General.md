@@ -2,7 +2,6 @@
 > Este documento es una obra en proceso.
 > Correcciones son bienvenidas
 
-
 Este proyecto es un banco para dinero falso, en el cual registraremos
 usuarios, y cada usuario tendrá acceso a al menos una cuenta bancaria,
 estas cuentas bancarias tendrán dos tipos _personal_ y de _negocio_.
@@ -49,6 +48,10 @@ del archivo `.json` en caso de ser parte de una colección que almacene archivos
  - Transacciones: `{timestamp}-{from_account_id}-{to_account_id}.json`
  - Imágenes de las cuentas: `{asset_md5hash}.jpg`
 
+> Issues Relacionados con estos aspectos.
+> - [Manejo de Usuarios](https://github.com/ekiim/fakemoney/issues/64)
+>
+
 Para el registro y manejo de usuarios, deberemos crear y consultar archivos con la siguiente
 estructura.
 
@@ -87,7 +90,7 @@ La estructuras deberá ser la siguiente:
 
 ```json
 {
-    "created_time": "2021-02-22T00:00:00-08:00"
+    "created_time": "2021-02-22T00:00:00-08:00",
     "id": "UUID",
     "picture": {
         "url": "https://{somedomain}/route/to/picture",

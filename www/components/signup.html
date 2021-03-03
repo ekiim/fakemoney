@@ -1,0 +1,36 @@
+<!--
+    Este archivo debe ser importado directamente en el html como
+    <div w3-include-html="/componentes/signup.html">/div>
+-->
+<div class="w3-center flowContainer">
+<div class="w3-section flowLauncher" data-flow="signup" data-title="Sign up" w3-include-html="/components/flows/signup-00-launcher.html"></div>
+<div class="w3-section flowStep" data-flow="signup" data-title="Personal Data" w3-include-html="/components/flows/signup-01-personal.html"></div>
+<div class="w3-section flowStep" data-flow="signup" data-title="Access Data" w3-include-html="/components/flows/signup-02-credentials.html"></div>
+<div class="w3-section flowStep" data-flow="signup" data-title="Validating">
+  <div class="w3-center">
+    <div class="loader" style="margin: 1em auto;"></div><span><b>Validating...</b></span>
+  </div>
+</div>
+</div>
+<script data-execution="pending">
+function SignUpFlow() {
+const flowRoot = document.querySelector(".flowContainer");
+const flowSteps = Array.from(flowRoot.querySelectorAll('.flowStep'));
+FlowInit(flowRoot, flowSteps);
+}
+Array.from(document.querySelectorAll("a.action")).map(anchor => {
+switch (anchor.dataset.action) {
+case 'signup':
+    anchor.addEventListener("click", SignUpFlow);
+    break;
+case 'signup-google':
+    anchor.addEventListener("click", (e) => window.alert("comming soon"));
+    break;
+case 'signup-facebook':
+    anchor.addEventListener("click", (e) => window.alert("comming soon"));
+    break;
+default:
+    break;
+}
+});
+</script>

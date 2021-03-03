@@ -2,7 +2,7 @@ from shutil import rmtree
 from os import makedirs
 import json
 import unittest
-import server.modules.storage as storage
+import filestorage.storage as storage
 
 
 class TestFileCollectionsStorage(unittest.TestCase):
@@ -66,7 +66,9 @@ class TestFileCollectionsStorage(unittest.TestCase):
             self.initial_record_name,
             self.storage_filled
         )
-        assert len(retrieve_data.keys()) == len(self.initial_record_data.keys())
+        retrieve_keys_count = len(retrieve_data.keys())
+        wanted_keys_count = len(self.initial_record_data.keys())
+        assert retrieve_keys_count == wanted_keys_count
         for (key, value) in self.initial_record_data.items():
             assert key in retrieve_data.keys()
             assert value == retrieve_data[key]

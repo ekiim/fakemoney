@@ -1,0 +1,69 @@
+<!--
+    Este archivo debe ser importado directamente en el html como
+    <div w3-include-html="/componentes/login.html">/div>
+-->
+<div class="w3-center flowContainer">
+    <div
+      class="w3-section flowLauncher"
+      data-flow="login"
+      data-title="login"
+      w3-include-html="/components/flows/login-00-launcher.html"></div>
+  <div class="w3-section flowStep"
+       data-flow="login-phone"
+       data-title="Phone Login"
+       w3-include-html="/components/flows/login-01-phone.html"></div>
+  <div class="w3-section flowStep"
+       data-flow="login-email"
+       data-title="Email Login"
+       w3-include-html="/components/flows/login-01-email.html"></div>
+  <div class="w3-section flowStep"
+       data-flow="login-email"
+       data-title="Verification"
+       w3-include-html="/components/flows/login-02-password.html"></div>
+  <div class="w3-section flowStep"
+       data-flow="login-phone"
+       data-title="Verification"
+       w3-include-html="/components/flows/login-02-password.html"></div>
+  <div class="w3-section flowStep"
+       data-flow="login-phone"
+       data-title="Validating"
+       w3-include-html="/components/flows/login-03-validating.html"></div>
+  <div class="w3-section flowStep"
+       data-flow="login-email"
+       data-title="Validating"
+       w3-include-html="/components/flows/login-03-validating.html"></div>
+</div>
+<script data-execution="pending">
+function LoginPhoneFlow() {
+    const flowRoot = document.querySelector(".flowContainer");
+    const flowSteps = Array.from(
+        flowRoot.querySelectorAll('.flowStep')
+    ).filter(step => step.dataset.flow === 'login-phone');
+    FlowInit(flowRoot, flowSteps);
+}
+function LoginEmailFlow() {
+    const flowRoot = document.querySelector(".flowContainer");
+    const flowSteps = Array.from(
+        flowRoot.querySelectorAll('.flowStep')
+    ).filter(step => step.dataset.flow === 'login-email');
+    FlowInit(flowRoot, flowSteps);
+}
+Array.from(document.querySelectorAll("a.action")).map(anchor => {
+    switch (anchor.dataset.action) {
+        case 'login-phone':
+            anchor.addEventListener("click", LoginPhoneFlow);
+            break;
+        case 'login-email':
+            anchor.addEventListener("click", LoginEmailFlow);
+            break;
+        case 'login-google':
+            anchor.addEventListener("click", (e) => window.alert("comming soon"));
+            break;
+        case 'login-facebook':
+            anchor.addEventListener("click", (e) => window.alert("comming soon"));
+            break;
+        default:
+            break;
+    }
+});
+</script>

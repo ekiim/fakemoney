@@ -9,6 +9,7 @@ bottle = "*"
 [dev-packages]
 flake8 = "*"
 webtest = "*"
+coverage = "*"
 
 [requires]
 python_version = "3.9"

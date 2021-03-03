@@ -1,0 +1,21 @@
+<div class="w3-card w3-round w3-white w3-padding-16" id="user_card">
+<div class="w3-container">
+ <h4 class="w3-center">User Data</h4>
+ <p class="w3-center">
+ <img src="{{picture}}" class="w3-circle" style="height:106px;width:106px" alt="Avatar" onerror="if (this.src != '/assets/avatar6.png') this.src = '/assets/avatar6.png';">
+ </p>
+ <hr>
+ <p><i class="fas fa-at fa-fw w3-margin-right w3-text-theme"></i>
+ <code>{{email}}</code>
+ </p>
+ <p><i class="fas fa-phone fa-fw w3-margin-right w3-text-theme"></i>
+ {{phone}}
+ </p>
+ <p><i class="fas fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i>
+    {{birthdate}}
+ </p>
+</div>
+</div>
+<script data-execution="pending">
+w3.displayObject("user_card", window.FakeMoney.User.data);
+</script>
