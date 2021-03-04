@@ -6,6 +6,16 @@
         <th>Amount</th>
         <th>Actions</th>
     </tr>
+	    <tr>
+        <td class="w3-hide-small">10</td>
+        <td>Pago de una compra</td>
+        <td>Saliente</td>
+        <td>1000</td>
+        <td>
+            <a class="w3-button" href="#"> <i class="fas fa-cog"> </i> </a>
+            <a class="w3-button" href="#"> <i class="fas fa-eye"> </i> </a>
+        </td>
+	</tr>
     <tr w3-repeat="transactions">
         <td class="w3-hide-small">{{id}}</td>
         <td>{{description}}</td>
@@ -16,6 +26,7 @@
             <a class="w3-button" href="#"> <i class="fas fa-eye"> </i> </a>
         </td>
 	</tr>
+	
 </table>
 <script data-execution="pending">
 w3.displayObject( "user_transactions", window.FakeMoney.User);
