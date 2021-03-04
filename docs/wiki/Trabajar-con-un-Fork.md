@@ -40,6 +40,29 @@ git status
 ```
 El comando git status muestra el estado del directorio de trabajo y del área del entorno de ensayo. Permite ver los cambios que se han preparado, los que no y los archivos en los que Git no va a realizar el seguimiento.
 
+### Clonacion del proyecto
+
+Para poder copiar el proyecto fakemoney, primetamente debemos:
+
+  - En la pagina de GitHub `https://github.com/ekiim/fakemoney` debos clickear el cuadro pequeño llamado **Fork**
+(El proyecto se fakemoney se ha copiado a nuestro repositorio)
+
+  - Ubicandonos en nuestro repositorio debemos entrar al del proyecto **ejem**`https://github.com/NombreDeUsuario/fakemoney`
+En el boton **Code** nos mostrara nuestro link **ejem** `https://github.com/NombreDeUsuario/fakemoney.git`
+
+En Git bash accederemos a la ruta de documentos para clonar ahi nuestra copia del proyecto
+```
+cd Documents/
+```
+Dentro de la ruta clonaremos el proyecto, utilizando nuestro propio link
+```
+git clone https://github.com/NombreDeUsuario/fakemoney.git
+```
+Para veficar estos pasos entraremos a la ruta del proyeto y mostraremos los documentos dentro de el
+```
+cd fakemoney/
+ls
+```
 ### Cambiar de editor de texto a NANO.
 
 Nano es un editor de texto visual para la terminal.
