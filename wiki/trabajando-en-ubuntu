@@ -1,6 +1,9 @@
+
 #trabajando con Ubuntu 
 El primer paso fue descargar el wsl de la version de ubuntu en la windows store,
 despues de descargar el wsl se instalar git 
 https://www.digitalocean.com/community/tutorials/como-instalar-git-en-ubuntu-18-04-es
 en este link aparece los comandos necesarios para poder hacer la instalacion de git, 
 ya despues de esto se descargamos el repositorio siguiendo los paso que estan en la wiki
+
+Descargamos pipenv para poder correr el servidor
