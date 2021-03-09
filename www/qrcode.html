@@ -13,9 +13,11 @@
 <script src="/js/w3.js"></script>
 <script src="/js/w3-custom.js"></script>
 <style>
-#qrcode > * { margin: 0 auto; max-width: 100%; max-height: 200px;}
-#qrcode > img { display: inline !important; }
-
+#qr_container > * { margin: 0 auto; max-width: 100%; max-height: 200px;}
+#qr_container > img { display: inline !important; }
+#qr_input {
+	margin: 16px;
+}
 </style>
 </head>
 <body>
@@ -28,7 +30,8 @@
         <div class="w3-rest"><span></span></div>
         <div class="w3-col l4 m6 s12">
           <div class="w3-card w3-round w3-padding w3-center">
-            <div id="qrcode"></div>
+            <div id="qr_container"></div>
+			<input type="text" id="qr_input"/>
           </div>
         </div>
         <div class="w3-rest"><span></span></div>
@@ -42,9 +45,26 @@
   <h5>Fakemoney</h5>
 </footer>
 <script>
-    w3.includeHTML(includeHTMLCallback);
-    new QRCode(document.getElementById("qrcode"), "https://fakemoney.ekiim.xyz");
+    let qr_div_id = "qr_container";
+	let qr_input_id = "qr_input";
+	let qr_value = "https://fakemoney.ekiim.xyz";
+	
+	w3.includeHTML(includeHTMLCallback);
+    
+	new QRCode(document.getElementById(qr_div_id), qr_value);
+    document.getElementById(qr_input_id).value = qr_value;
+	
+	function UpdateQRCode(node, value) {
+		node.innerHTML = "";
+		new QRCode(node, value);
+    }
+    
+	document.getElementById(qr_input_id).addEventListener("change", (e) => {
+		const qr_node = document.getElementById(qr_div_id);
+		UpdateQRCode(qr_node, e.target.value);
+    })    
 </script>
 </body>
 </html> 
+
 

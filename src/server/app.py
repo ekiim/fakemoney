@@ -33,6 +33,7 @@ class BottleGlass(bottle.Bottle):
 
 
 app = BottleGlass()
+app.route_mount('/transactions', server.routes.transactions.app)
 
 
 @app.get("/")

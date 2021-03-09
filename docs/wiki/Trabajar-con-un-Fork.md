@@ -63,6 +63,24 @@ Para veficar estos pasos entraremos a la ruta del proyeto y mostraremos los docu
 cd fakemoney/
 ls
 ```
+### COMO ACTUALIZAR TU REPOSITORIO
+Para actualizar los cambios recientes del proyecyo
+Entrar a la ruta de documentos o donde se haya descargado el proyecto
+````
+cd Documents/
+````
+Despues entraremos a la ruta del proyecto
+```
+cd fakemoney/
+```
+Ahora podremos actualizar el **REPOSITORIO** Aqui se descargaran las actualizaciones del proyecto
+```
+git pull profe main
+```
+Ahora se deben agregar esas actualizaciones a tu repositorio
+```
+git push
+```
 ### Cambiar de editor de texto a NANO.
 
 Nano es un editor de texto visual para la terminal.
