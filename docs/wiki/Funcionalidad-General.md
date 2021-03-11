@@ -3,8 +3,12 @@
 > Correcciones son bienvenidas
 
 Este proyecto es un banco para dinero falso, en el cual registraremos
-usuarios, y cada usuario tendrá acceso a al menos una cuenta bancaria,
+usuarios, y cada usuario tendrá acceso al menos una cuenta bancaria,
 estas cuentas bancarias tendrán dos tipos _personal_ y de _negocio_.
+
+El usuario sólo tendrá derecho a editar su propio usuario, podrá revisar los
+estados de cuenta y realizar transacciones de las cuentas que le esten asociadas.
+
 
 El almacenamiento de registros consultables y archivos estáticos, se llevara
 por medio del modulo de Python `server.storage` (dicho archivo esta bajo
