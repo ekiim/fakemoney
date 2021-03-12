@@ -29,7 +29,7 @@ En esta sección te presentamos 3 formas diferentes que se pueden utilizar para 
 >
 >
 
-- ¿Cómo inciiar sesión?
+- ¿Cómo inciar sesión?
 Para iniciar sesión en la app, debes ingresar tu nombre de usuario y contraseña.
 
 PD: El incio de sesión puede variar dependiendo al método con que completaste tu registro
