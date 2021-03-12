@@ -9,29 +9,31 @@
 >
 >                                **FAKEMONEY**
 
-FakeMoney es una aplicación que  permite realizar transacciones por medio de links o codigos QR, consultar tus estados de cuenta y monitorear 
-el flujo de la moneda en relacion con tu banco.
+FakeMoney es una aplicación que permite realizar transacciones por medio de links y/o códigos QR, además de poder consultar tus estados de cuenta y monitorear 
+el flujo de la moneda en relación con tu banco.
 >
 >
-Es muy facil de utilizar  a continuación  mostramos un a serie de pasos a seguir sobre el uso de la app **FakeMoney** 
+Es muy fácil de utilizar, a continuación mostramos una serie de pasos para aprender el uso de la app **FakeMoney** 
 
-- Registro de usuario
-En esta paso tenememos tres opciones diferentes para registrarnos:
-	1- Llenando un formulario
-		Este paso es muy sencillo solo ingresa los datos solicitados en cada uno de los campos
+- ¿Cómo registrarse? 
+En esta sección te presentamos 3 formas diferentes que se pueden utilizar para registrarse: 
 
-	2- Registrate con tu cuenta de Gmail
-		Solo con un clic y verfica tu registro a travez de tu cuenta de Gmail
 	
-	3- Registrate con tu cuenta de Facebook
-		Solo con un clic y verifica tu registro  a traves de Facebook 
+	1- Registro mediante un formulario: este paso es muy sencillo, solo ingresa tus datos solicitados en cada uno de los campos del formulario para completar el registro.
+
+	2- Regístrate mediante tu cuenta de Gmail: haz clic en el logo de Google, verifica tu registro a través de tu cuenta de Gmail.
+	
+	3- Regístrate mediante tu cuenta de Facebook: haz click en el logo de Facebook, verifica tu registro a través de Facebook.
+
 >
 >
 >
 
-- Iniciar Sesion
-Solo ingresa tu nombre de usuario y contrasena.
-(Recuerda que este depende de tu metodo de registro pude ser correo o numero de telefono).	
+- ¿Cómo inciiar sesión?
+Para iniciar sesión en la app, debes ingresar tu nombre de usuario y contraseña.
+
+PD: El incio de sesión puede variar dependiendo al método con que completaste tu registro
+puede ser con tu correo electrónico o número de teléfono).
 >
 >
 - Interfaz de Usuario (en proceso)...
