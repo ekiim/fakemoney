@@ -1,9 +1,10 @@
-name: Github Wiki and Pages Update
-
+name: Github Wiki Push
 on:
   push:
     branches:
       - main
+    paths:
+      - docs/wiki/**
 
 jobs:
   publish:
@@ -14,12 +15,6 @@ jobs:
       - name: Upload Documentation to Wiki
         uses: SwiftDocOrg/github-wiki-publish-action@v1
         with:
-          path: "wiki"
+          path: ./docs/wiki
         env:
           GH_PERSONAL_ACCESS_TOKEN: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
-      - name: Publish on Github Pages.
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
-          publish_dir: ./www
-          publish_branch: www

@@ -1,0 +1,25 @@
+sequenceDiagram
+    participant A as User A
+    participant B as User B
+    participant C as Web Client
+    participant P as Python API
+    participant S as Storage Module
+    A->>C: User Requests Payment Token
+    C->>A: User Gets Payment Token as Code or QR
+    A->>B: User A exposes Payment Token to User B
+    B->>C: User B Inputs Payment Token by Code or QR Picture
+    C->>P: POST /transactions/process/{Payment Token}
+    P->>S: Query for users' data
+    S->>P: Calculate User A's Availiable Money
+    alt If users has enough money in the bank
+        P->>S: Store Transaction
+        P->>C: Return Transaction Success
+        C->>B: Show User Success Message
+        B->>A: Notify User that the transaction Succeed
+        A->>C: Refreshes Statment View
+    else If user doesn't have enought money in the bank
+        P->>C: Return transaction fail
+        C->>B: Show User Transaction fail message
+        B->>A: Notify User that the transaction failed
+    end
+

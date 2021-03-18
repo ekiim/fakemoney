@@ -1,9 +1,17 @@
 
 #trabajando con Ubuntu 
-El primer paso fue descargar el wsl de la version de ubuntu en la windows store,
-despues de descargar el wsl se instalar git 
-https://www.digitalocean.com/community/tutorials/como-instalar-git-en-ubuntu-18-04-es
-en este link aparece los comandos necesarios para poder hacer la instalacion de git, 
-ya despues de esto se descargamos el repositorio siguiendo los paso que estan en la wiki
+1.El primer paso es entrar a la tienda de microsoft store la version de ubuntu 20.04 para descargar y trabajar
+en la terminal de ubuntu
 
-Descargamos pipenv para poder correr el servidor
+2.El segundo paso es descargar los repositorios de git para poder trabajar con ellos en este link se encutran los
+pasos a seguir: https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu-20-04-es
+
+2.Ya instalado git el seguiente paso sera instalar pyton3.1 para trabajar con los pasos esta en el siguente link:
+https://ubunlog.com/python-3-9-como-instalar-en-ubuntu-20-04/
+
+3.Despues de este paso se instalar la los repositorios de pip para poder trabajar con nuestro entorno:
+https://linuxize.com/post/how-to-install-pip-on-ubuntu-20.04/
+
+4.El siguiente paso sera intalar pipenv para inciar el servidor de nuestro hambiente los pasos esta en el siguiente
+link: https://manpages.ubuntu.com/manpages/eoan/man1/pipenv.1.html
+ 

@@ -1,0 +1,18 @@
+sequenceDiagram
+    participant A as User A
+    participant C as Web Client
+    participant P as Python API
+    participant S as Storage Module
+    A->>C: User Requests Statement
+    C->>P: GET /account/{account_id}/statement
+    P->>S: Query for account latest statement and subsequent transactions
+    alt No Subsequent Transactions
+        S->>P: Query return with no subsequent transactions
+        P->>C: Return last known statement
+    else With Subsequent Transactions
+        S->>P: Query return with subsequent transactions
+        P->>S: Calculate and store a new statment with updated data.
+        P->>C: Return latest statement
+    end
+    C->>A: User visualizes statement
+

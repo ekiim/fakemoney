@@ -1,0 +1,23 @@
+sequenceDiagram
+    participant U as User
+    participant C as Web Client
+    participant P as Python API
+    participant S as Storage Module
+    U->>C: User Submits register form.
+    C->>P: POST /auth/login
+    P->>S: Query Storage for user's data.
+    alt User Found
+        S->>P: Query Returns None Empty
+        opt Auth Data Valid
+            P->>C: User Auth Success
+            C->>U: Redirect Client Main Page
+        end
+        opt Auth Data Invalid
+            P->>C: User Auth Success
+            C->>U: User to Correct Data
+        end
+    else User Not Found
+        S->>P: Query Returns Empty
+        P->>C: Error message
+        C->>U: User to Correct Data
+    end

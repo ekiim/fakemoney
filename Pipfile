@@ -7,14 +7,12 @@ name = "pypi"
 bottle = "*"
 
 [dev-packages]
-pytest = "*"
 flake8 = "*"
 webtest = "*"
-jsbeautifier = "*"
-cssbeautifier = "*"
+coverage = "*"
 
 [requires]
-python_version = "3.8"
+python_version = "3.9"
 
 [scripts]
 lint = "bash scripts/lint.sh"

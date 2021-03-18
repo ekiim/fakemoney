@@ -1,0 +1,20 @@
+sequenceDiagram
+    participant U as User
+    participant C as Web Client
+    participant P as Python API
+    participant S as Storage Module
+    U->>C: User Submits register form.
+    C->>P: POST /auth/signup
+    P->>S: Query Storage for user's data.
+    alt User already exists
+        S->>P: Query Returns None Empty
+        P->>C: Error message
+        C->>U: User to Correct Data
+    else
+        S->>P: Query Returns Empty
+        P->>C: User Creation Success
+        C->>U: Redirect to Login
+    end
+
+
+
