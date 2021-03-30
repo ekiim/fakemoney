@@ -108,12 +108,34 @@ De aqui en adelante uno puede ejecutar
 ```
 git pull profe main
 ```
-
+	
 Para traer a su rama actual los cambios que se presentan en la rama principal `ekiim:main`.
 
 Cuando se tenga un conflicto entrarán en modo `rebase`, donde tendrán que editar los archivos para conciliar los cambios, y borraran lo no deseado.
 
 Una vez concluida la fase de conciliación de cambios ejecutamos `git add` para informarle a `git` de esto, y ejecutamos un `git rebase --continue`.
+
+### Volver al branch principal (main) en caso de ingresar  un branch fuera de lugar.
+En caso de que al momento de estar actualizando su correspondiente branch, puede que en ocasiones se cree por error un branch temporal (temp) y represente un mini dolor
+de cabeza como resolverlo, se anexan una lista de comandos que nos pueden ayudar en esa situacion en especifico:
+
+Se ingresa el siguiente comando para ver exactamente donde de esta ubicado:
+git branch -a
+
+Una vez localizado donde se posiciona, se ejecutan los siguientes comandos:
+git checkout main
+git branch -m main-backup
+git branch -a
+
+Ahora se deberia de estar en el branch de respaldo. Una vez aqui se ejecuta el siguiente comando:
+git checkout remotes/profe/main
+
+Seguido por el siguiente comando:
+git checkout -b main
+
+Por ultimo una vez de vuelta en el branch main, solo se forzan los cambios que se hayan eecho y listo:
+git push --force origin main
+
 
 
 
