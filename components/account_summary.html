@@ -1,0 +1,73 @@
+<p><h4 align="center"> INFORMACIÓN FINANCIERA </h4>
+
+<table class="w3-table w3-striped w3-bordered" id="user_account">
+    <tr class="w3-theme-d2">
+        <th class="w3-hide-small">Saldo total</th>
+        <th>Egresos del periodo</th>
+        <th>Ingresos del periodo</th>
+        <th>Cantidad de transacciones</th>
+        <th>Fecha de consulta</th>
+		<th>Periodo de consulta</th>
+		<th> </th>
+
+    </tr>
+    <tr w3-repeat="accounts">
+        <td class="w3-hide-small">{{Saldo_total}}</td>
+		<td>{{Egresos del  periodo}}</td>
+        <td>{{Ingresos del periodo}}</td>
+        <td>{{Cantidad de transacciones}}</td>
+        <td>{{Fecha de consulta}}</td>
+		<td>{{Periodo de consulta}}</td>
+
+        <td>
+            <a class="w3-button" href="#"> <i class="fas fa-eye"> </i> </a>
+			 <a class="w3-button" href="#"> <i class="fas fa-eye"> </i> </a>
+        </td>
+		
+	</tr>
+</table>
+<script data-execution="pending">
+w3.displayObject( "user_account", window.FakeMoney.User);
+</script>
+
+
+
+
+<table class="w3-table w3-striped w3-bordered" id="user_account">
+    <tr class="w3-theme-d2">
+        <th class="w3-hide-small">Saldo_total</th>
+        <th>Egresos del  periodo</th>
+        <th>Ingresos del periodo</th>
+        <th>Cantidad de transacciones</th>
+        <th>Fecha de consulta</th>
+		<th>Periodo de consulta</th>
+    </tr>
+	    <tr>
+        <td class="w3-hide-small">10</td>
+        <td>Pago de una compra</td>
+        <td>Saliente</td>
+        <td>1000</td>
+		<td>1000</td>
+		<td>1000</td>
+        <td>
+            <a class="w3-button" href="#"> <i class="fas fa-eye"> </i> </a>
+        </td>
+	</tr>
+    <tr w3-repeat="accounts">
+        <td class="w3-hide-small">{{Saldo_total}}</td>
+        <td>{{Egresos del periodo}}</td>
+        <td>{{Ingresos del periodo}}</td>
+        <td>{{Cantidad de transacciones}}</td>
+		<td>{{Fecha de consulta}}</td>
+		<td>{{Periodo de consulta}}</td>
+        <td>
+            <a class="w3-button" href="#"> <i class="fas fa-cog"> </i> </a>
+            <a class="w3-button" href="#"> <i class="fas fa-eye"> </i> </a>
+        </td>
+	</tr>
+	
+</table>
+<script data-execution="pending">
+w3.displayObject( "user_account", window.FakeMoney.User);
+</script>
+
