@@ -116,26 +116,63 @@ Cuando se tenga un conflicto entrarán en modo `rebase`, donde tendrán que edit
 Una vez concluida la fase de conciliación de cambios ejecutamos `git add` para informarle a `git` de esto, y ejecutamos un `git rebase --continue`.
 
 ### Volver al branch principal (main) en caso de ingresar  un branch fuera de lugar.
-En caso de que al momento de estar actualizando su correspondiente branch, puede que en ocasiones se cree por error un branch temporal (temp) y represente un mini dolor
-de cabeza como resolverlo, se anexan una lista de comandos que nos pueden ayudar en esa situacion en especifico:
+
+En caso de que al momento de estar actualizando su correspondiente branch, puede que en ocasiones se cree por error un branch temporal (`temp`) y represente un mini dolor
+de cabeza.
+
+#### ¿Cómo resolverlo?
+
+> Antes de iniciar hay que descartar todos los cambios que tengamos, realizando un.
+> `git stash`
+
+
+> se anexan una lista de comandos que nos pueden ayudar en esa situación en especifico
 
 Se ingresa el siguiente comando para ver exactamente donde de esta ubicado:
+
+```
 git branch -a
+```
+
+> Este comando es para listar todos las ramas (_branch_) que tienes locales, asi como las referencias a ramas remotas.
 
 Una vez localizado donde se posiciona, se ejecutan los siguientes comandos:
-git checkout main
-git branch -m main-backup
-git branch -a
 
-Ahora se deberia de estar en el branch de respaldo. Una vez aqui se ejecuta el siguiente comando:
+```
+git checkout main
+```
+> Accedemos a la rama principal `main`
+
+```
+git branch -m main-backup
+```
+
+> Re nombramos la rama `git branch -m <new-name>` principal a _main-backup_ (en caso de ya tener una rama nombrada asi, utilizar otro nombre).
+
+Ahora se se tiene el branch de respaldo. 
+
+```
+git branch -a
+```
+
+> Verificamos que la rama `main` ya no existe.
+
+Generamos una nueva rama `main` con apartir de la rama principal de `remote/profe/main`
+```
 git checkout remotes/profe/main
+git checkout -b main
+```
+
+> `checkout` es para cambiar de branch en la que trabajamos actualmente, y 
+> `checkout -b` es para crear un branch apartir de el branch en el que estamos actualmente.
 
 Seguido por el siguiente comando:
-git checkout -b main
 
-Por ultimo una vez de vuelta en el branch main, solo se forzan los cambios que se hayan eecho y listo:
+Por ultimo una vez de vuelta en el branch main, solo se forzan los cambios que se hayan hecho y listo:
+
+```
 git push --force origin main
+```
 
-
-
+> Actualizamos forzosamente nuestra rama del `origen` (repositorio de github de mi usuario).
 
