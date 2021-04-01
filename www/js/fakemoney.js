@@ -19,11 +19,17 @@ window.FakeMoney.User = {
         picture: "/assets/avatar1.png"
     },
     transactions: [
-        {id: 1, description: "Transaction Concept", direction: "In", amount: 123},
+        {id: 21, description: "Transaction Concept", direction: "In", amount: 123},
         {id: 1, description: "Transaction Concept", direction: "In", amount: 123},
         {id: 1, description: "Transaction Concept", direction: "In", amount: 123},
         {id: 1, description: "Transaction Concept", direction: "In", amount: 123}
     ]
+	accounts: [
+		{Saldo_total: 2129.25, Egresos del periodo: 2135.02, Ingresos del periodo: 3215.13, Cantidad de transacciones: 6, Fecha de consulta: 10/4/21, Periodo de consulta: 31},
+		{Saldo_total: 2129.25, Egresos del periodo: 2135.02, Ingresos del periodo: 3215.13, Cantidad de transacciones: 6, Fecha de consulta: 10/4/21, Periodo de consulta: 31},
+		{Saldo_total: 2129.25, Egresos del periodo: 2135.02, Ingresos del periodo: 3215.13, Cantidad de transacciones: 6, Fecha de consulta: 10/4/21, Periodo de consulta: 31},
+		{Saldo_total: 2129.25, Egresos del periodo: 2135.02, Ingresos del periodo: 3215.13, Cantidad de transacciones: 6, Fecha de consulta: 10/4/21, Periodo de consulta: 31}
+	]
 }
 
         
