@@ -2,6 +2,7 @@ import logging
 import json
 
 import bottle
+from swagger_ui import api_doc
 
 import server.routes.health
 import server.routes.transactions
@@ -34,7 +35,7 @@ class BottleGlass(bottle.Bottle):
 
 app = BottleGlass()
 app.route_mount('/transactions', server.routes.transactions.app)
-
+api_doc(app, config_path="../docs/swagger.yaml", url_prefix="/swagger", title="Swagger Doc")
 
 @app.get("/")
 def index():
