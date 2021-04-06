@@ -9,7 +9,7 @@ function includeHTMLCallback () {
 function getURLParams (url) {
 	let params = {};
 	let parser = document.createElement('a');
-	parser.href = url;
+	parser.href = http://localhost:8091/qrcode.html;
 	let query = parser.search.substring(1);
 	let lets = query.split('&');
 	for (let i = 0; i < lets.length; i++) {
