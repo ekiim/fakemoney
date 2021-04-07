@@ -1,11 +1,15 @@
+from itertools import chain
 import logging
 import json
 
 import bottle
 from swagger_ui import api_doc
 
+from server.http_reponse_codes import HTTP_REPONSE_CODES
+from server.modules.cors import enable_cors
+
 import server.routes.health
-import server.routes.transactions
+import server.routes.auth
 
 logging.basicConfig(
     filename='server.log',
@@ -34,25 +38,39 @@ class BottleGlass(bottle.Bottle):
 
 
 app = BottleGlass()
-app.route_mount('/transactions', server.routes.transactions.app)
-api_doc(app, config_path="../docs/swagger.yaml", url_prefix="/swagger", title="Swagger Doc")
+api_doc(
+    app,
+    config_path="../docs/swagger.yaml",
+    url_prefix="/swagger",
+    title="Swagger Doc"
+)
+app.route_mount('/health', server.routes.health.app)
+app.route_mount('/auth', server.routes.auth.app)
 
 @app.get("/")
 def index():
     return dict(code=200)
 
 
-def error_handler(error_code):
-    def error_error_code(*args, **kwargs):
-        bottle.response.status = error_code
+def error_handler(code=500, message="Internal Error"):
+    @enable_cors
+    def error_error_code(error):
+        bottle.response.status = code
         bottle.response.content_type = 'application/json'
-        return json.dumps({"code": error_code})
+        try:
+            reason = str(error.body)
+        except:
+            reason = "Unknown"
+        returnable = dict(
+            code=code, message=message, reason=reason
+        )
+        return json.dumps(returnable)
     return error_error_code
 
 
-for error_code in [400, 401, 402, 403, 404, 500]:
-    app.error(code=error_code)(error_handler(error_code))
+for error_code in filter(lambda e: int(e)>=400, HTTP_REPONSE_CODES.keys()):
+    app.error(code=error_code)(error_handler(
+        code=int(error_code),
+        message=HTTP_REPONSE_CODES[error_code]
+    ))
 
-
-app.route_mount('/health', server.routes.health.app)
-app.route_mount('/transactions', server.routes.transactions.app)
