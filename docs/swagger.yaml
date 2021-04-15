@@ -1,0 +1,156 @@
+swagger: "2.0"
+info:
+  description: "Esta es la especificacion que sigue la aplicacion fakemoney."
+  version: "1.0.0"
+  title: "Fakemoney Api"
+  contact:
+    email: "salgado.miguel@uabc.edu.mx"
+  license:
+    name: "GPL3"
+    url: "https://github.com/ekiim/fakemoney/blob/main/LICENSE"
+host: "api.fakemoney.ekiim.xyz"
+basePath: "/"
+tags:
+- name: "auth"
+  description: "Operacions respecto a autenticacion."
+- name: "health"
+  description: "Operaciones respecto al funcionamiento del sistema."
+schemes:
+- "https"
+- "http"
+paths:
+  /auth/login/email:
+    post:
+      tags:
+      - "auth"
+      summary: "Autenticacion de usuario por correo electronico"
+      description: "Este metodo es para autenticar a a los usuarios"
+      operationId: "auth:login:email"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Credenciales de usuario, correo y contraseña"
+        required: true
+        schema:
+          $ref: "#/definitions/LoginDataEmail"
+      responses:
+        200:
+          description: "Acceso autorizado"
+          schema:
+            $ref: "#/definitions/ApiToken"
+        401:
+          description: "Acceso invalido debido a contrase~na"
+          schema:
+            $ref: "#/definitions/ApiResponse"
+  /auth/login/phone:
+    post:
+      tags:
+      - "auth"
+      summary: "Autenticacion de usuario por telefono"
+      description: "Este metodo es para autenticar a a los usuarios"
+      operationId: "auth:login:phone"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Credenciales de usuario, telefono y contraseña"
+        required: true
+        schema:
+          $ref: "#/definitions/LoginDataPhone"
+      responses:
+        200:
+          description: "Acceso autorizado"
+          schema:
+            $ref: "#/definitions/ApiToken"
+        401:
+          description: "Acceso invalido debido a contrase~na"
+          schema:
+            $ref: "#/definitions/ApiResponse"
+  /auth/signup:
+    post:
+      tags:
+      - "auth"
+      summary: "Registro de usuarios"
+      description: "Este metodo es para registrar usuarios"
+      operationId: "auth:signup"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Datos del usuario a registrar"
+        required: true
+        schema:
+          $ref: "#/definitions/SignUpData"
+      responses:
+        200:
+          description: "Acceso autorizado"
+          schema:
+            $ref: "#/definitions/ApiToken"
+        401:
+          description: "Acceso invalido debido a contrase~na"
+          schema:
+            $ref: "#/definitions/ApiResponse"
+
+securityDefinitions:
+  api_key:
+    type: "apiKey"
+    name: "api_key"
+    in: "header"
+definitions:
+  ApiResponse:
+    type: "object"
+    properties:
+      code:
+        type: "integer"
+        format: "int32"
+      type:
+        type: "string"
+      message:
+        type: "string"
+  ApiToken:
+    type: "object"
+    properties:
+      token:
+        type: "string"
+  LoginDataEmail:
+    type: object
+    properties:
+      email:
+        type: "string"
+      password:
+        type: "string"
+  LoginDataPhone:
+    type: object
+    properties:
+      phone:
+        type: "string"
+      password:
+        type: "string"
+  PersonaData:
+    type: object
+    properties:
+      first_name:
+        type: string
+      middle_name:
+        type: string
+      last_name_1:
+        type: string
+      last_name_2:
+        type: string
+      birthdate:
+        $ref: "#/definitions/AccessData"
+  SignUpData:
+    type: object
+    properties:
+      personalData:
+        $ref: "#/definitions/PersonalData"
+      accessData:
+        $ref: "#/definitions/AccessData"
+
+externalDocs:
+  description: "Wiki del proyecto."
+  url: "https://github.com/ekiim/fakemoney/wiki"

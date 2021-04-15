@@ -19,10 +19,13 @@ def store_new_record(
         (storage_path / collection).mkdir(parents=True)
     if timestamp is None:
         timestamp = time()
-    target_file = collection / Path(f"{timestamp}-{name}.json")
-    with (storage_dir / target_file).open('w') as file:
-        json.dump(data, file)
-    return target_file
+    target_file = collection / Path(f"{timestamp}_{name}.json")
+    if isinstance(data, dict):
+        text = json.dumps(data)
+    elif isinstance(data, str):
+        text = data
+    (storage_dir / target_file).write_text(text)
+    return target_file.name
 
 
 def query_collection(
@@ -33,14 +36,16 @@ def query_collection(
     storage_path = Path(storage_dir)
     target_collection = storage_path / collection
     if not target_collection.exists():
-        return []
-    return list(filter(
-        filter_func,
-        map(
-            lambda p: relpath(str(p), str(target_collection)),
-            target_collection.iterdir()
-        )
-    ))
+        returnable = []
+    else:
+        returnable = list(filter(
+            filter_func,
+            map(
+                lambda p: relpath(str(p), str(target_collection)),
+                target_collection.iterdir()
+            )
+        ))
+    return returnable
 
 
 def retrieve_record(

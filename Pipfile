@@ -5,6 +5,10 @@ name = "pypi"
 
 [packages]
 bottle = "*"
+marshmallow = "*"
+swagger-ui-py = "*"
+phonenumbers = "*"
+pyjwt = "*"
 
 [dev-packages]
 flake8 = "*"
@@ -16,7 +20,8 @@ python_version = "3.9"
 
 [scripts]
 lint = "bash scripts/lint.sh"
-start = "bash scripts/enterypoint.sh"
+start = "bash scripts/server.sh"
+server = "bash scripts/enterypoint.sh"
 www = "bash scripts/serve_html.sh"
 test = "bash scripts/test.sh"
 clean = "bash scripts/clean.sh"
