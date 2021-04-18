@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<title>
+Tabla de transacciones y detinatarios
+</title>
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+<head>
+<style>
+#tabla {
+position: absolute;
+top: 330px;
+right: 50px;
+}
+table, th, td {
+   border: 1px solid black;
+  border-collapse: collapse;
+}
+
+</style>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/css/w3.css">
+<link rel="stylesheet" href="/css/w3-ext.css">
+<link rel="stylesheet" href="/css/w3-theme-blue-grey.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+<script src="/js/fakemoney.js"></script>
+<script src="/js/w3.js"></script>
+<script src="/js/w3-custom.js"></script>
+
+</head>
+
+<body>
+<!-- Navbar -->
+<div class="w3-top" w3-include-html="/components/auth-topnav.html"></div>
+
+<!-- Page Container -->
+<main class="w3-container w3-content" style="max-width:1400px;margin-top:80px;">
+  <!-- The Grid -->
+  <div class="w3-row">
+    <!-- Left Column -->
+    <div class="w3-col m3">
+      <!-- Profile -->
+      <div w3-include-html="/components/user-card.html"></div>
+      <br>
+      
+      <!-- Accordion -->
+      <div class="w3-card w3-round" style="height:100%">
+        <div class="w3-white">
+          <a class="w3-button w3-block w3-theme-l1 w3-left-align">
+              <i class="fa fa-circle-o-notch fa-fw w3-margin-right"></i>
+              My Groups
+          </a>
+          <div class="w3-hide w3-container"><p>Some text..</p></div>
+        </div>      
+        <div class="w3-white">
+          <a class="w3-button w3-block w3-theme-l1 w3-left-align">
+              <i class="fa fa-circle-o-notch fa-fw w3-margin-right"></i>
+              My Groups
+          </a>
+          <div class="w3-hide w3-container"><p>Some text..</p></div>
+        </div>      
+      </div>
+      <br>
+      
+    <!-- End Left Column -->
+
+<!---Div para el style -->
+	<div id="tabla"> 
+
+<table class="w3-table w3-striped w3-bordered" div id="Tabla_visualizar_transacciones" >
+    <tr class="w3-theme-d2">
+        <th class="w3-hide-small">ID Transaccion</th>
+        <th>Concepto</th>
+        <th>Direccion</th>
+        <th>Monto</th>
+        <th>Banco</th>
+		<th>Destinatario</th>
+		<th>Fecha de deposito</th>
+		<th>Numero de transacciones </th>
+    </tr>
+	<tr>
+	  <th class="w3-hide-small">{{ID}}</th>
+        <th>{{Concepto}}</th>
+		<th>{{Direccion}}</th>
+		<th>{{Monto}}</th>
+        <th>{{Banco}}</th>
+        <th>{{Destinatario}}</th>
+        <th>{{Fecha de deposito}}</th>
+		<th>{{Número de transacciones}}</th>
+	</tr>
+	<tr>
+		<th class="w3-hide-small">{{ID}}</th>
+        <th>{{Concepto}}</th>
+		<th>{{Direccion}}</th>
+		<th>{{Monto}}</th>
+        <th>{{Banco}}</th>
+        <th>{{Destinatario}}</th>
+        <th>{{Fecha de deposito}}</th>
+		<th>{{Número de transacciones}}</th>
+	</tr>
+	<tr>
+		<th class="w3-hide-small">{{ID}}</th>
+        <th>{{Concepto}}</th>
+		<th>{{Direccion}}</th>
+		<th>{{Monto}}</th>
+        <th>{{Banco}}</th>
+        <th>{{Destinatario}}</th>
+        <th>{{Fecha de deposito}}</th>
+		<th>{{Número de transacciones}}</th>
+	</tr>
+	<tr>
+		<th class="w3-hide-small">{{ID}}</th>
+        <th>{{Concepto}}</th>
+		<th>{{Direccion}}</th>
+		<th>{{Monto}}</th>
+        <th>{{Banco}}</th>
+        <th>{{Destinatario}}</th>
+        <th>{{Fecha de deposito}}</th>
+		<th>{{Número de transacciones}}</th>
+	</tr>	
+            
+       
+	</div> <!-- cierre para el script--> 
+	
+</table>
+
+	 </div><!-- cierre de Div de style--> 
+	
+	
+		<script>
+			var myObject= {"ID" : "1", "Concepto" : "Pago universitario","Direccion": "El refugio, Tijuna, B.C, México", "Monto": "2800", "Banco" : "Banamex", "Destinatario" : "Banco azteca"
+							, "Fecha de deposito" : "10/4/21", "Número de transacciones" : "31"};
+			w3.displayObject("Tabla_visualizar_transacciones", myObject);
+		</script>
+</body>
+</html> 
