@@ -10,18 +10,93 @@
 body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
 </style>
 <body class="w3-light-grey">
+<style type="text/css">
+      
+      * {
+        margin:0px;
+        padding:1px;
+      }
+      
+      #header {
+        margin:auto;
+        width:850px;
+        font-family:Arial, Helvetica, sans-serif;
+      }
+      
+      ul, ol {
+        list-style:none;
+      }
+      
+      .nav > li {
+        float:left;
+      }
+      
+      .nav li a {
+        background-color:#000;
+        color:#fff;
+        text-decoration:none;
+        padding:10px 40px;
+        display:block;
+      }
+      
+      .nav li a:hover {
+        background-color:#434343;
+      }
+      
+      .nav li ul {
+        display:none;
+        position:absolute;
+        min-width:250px;
+      }
+      
+      .nav li:hover > ul {
+        display:block;
+      }
+      
+      .nav li ul li {
+        position:relative;
+      }
+      
+      .nav li ul li ul {
+        right:-250px;
+        top:0px;
+      }
+      
+    </style>
+<div id="header">
+      <ul class="nav">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="">Servicios</a>
+          <ul>
+            <li><a href="">Transacciones QR</a></li>
+            <li><a href="">Estados De Cuenta</a></li>
+            <li><a href="">Comprobantes</a></li>
+            </li>
+          </ul>
+        </li>
+        <li><a href="">Acerca de</a>
+          <ul>
+            <li><a href="about.html">Nosotros</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contacto</a></li>
+        </li>
+        <li><a href="login.html" class="btn btn-success">Login</a></li>
+        <li><a href="signup.html" class="btn btn-success">Sign out</a></li>
 
+      </ul>
+    </div>
   <div class="w3-container" id="contact">
-    <h2>Contact</h2>
-    <p>If you have any questions, do not hesitate to ask them.</p>
-    <i class="fa fa-map-marker w3-text-red" style="width:30px"></i> Chicago, US<br>
-    <i class="fa fa-phone w3-text-red" style="width:30px"></i> Phone: +00 151515<br>
-    <i class="fa fa-envelope w3-text-red" style="width:30px"> </i> Email: mail@mail.com<br>
+    <h2>Contacto</h2>
+    <p>Mas informes consultar al servicio de soporte.</p>
+    <i class="fa fa-map-marker w3-text-red" style="width:30px"></i> Tijuana B.C<br>
+    <i class="fa fa-phone w3-text-red" style="width:30px"></i> Phone: 664-345-52-13<br>
+    <i class="fa fa-envelope w3-text-red" style="width:30px"> </i> Email: Fakemoney_banck@mail.com<br>
     <form action="/action_page.php" target="_blank">
       <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
       <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="Email"></p>
       <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required name="Message"></p>
-      <p><button class="w3-button w3-black w3-padding-large" type="submit">SEND MESSAGE</button></p>
+      <p><button class="w3-button w3-black w3-padding-large" type="submit">Enviar mensaje</button></p>
     </form>
   </div>
 
