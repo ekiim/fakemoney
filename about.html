@@ -10,28 +10,103 @@
 body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
 </style>
 <body class="w3-light-grey">
+  <style type="text/css">
+      
+      * {
+        margin:0px;
+        padding:1px;
+      }
+      
+      #header {
+        margin:auto;
+        width:850px;
+        font-family:Arial, Helvetica, sans-serif;
+      }
+      
+      ul, ol {
+        list-style:none;
+      }
+      
+      .nav > li {
+        float:left;
+      }
+      
+      .nav li a {
+        background-color:#000;
+        color:#fff;
+        text-decoration:none;
+        padding:10px 40px;
+        display:block;
+      }
+      
+      .nav li a:hover {
+        background-color:#434343;
+      }
+      
+      .nav li ul {
+        display:none;
+        position:absolute;
+        min-width:250px;
+      }
+      
+      .nav li:hover > ul {
+        display:block;
+      }
+      
+      .nav li ul li {
+        position:relative;
+      }
+      
+      .nav li ul li ul {
+        right:-250px;
+        top:0px;
+      }
+      
+    </style>
+<div id="header">
+      <ul class="nav">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="">Servicios</a>
+          <ul>
+            <li><a href="">Transacciones QR</a></li>
+            <li><a href="">Estados De Cuenta</a></li>
+            <li><a href="">Comprobantes</a></li>
+            </li>
+          </ul>
+        </li>
+        <li><a href="">Acerca de</a>
+          <ul>
+            <li><a href="about.html">Nosotros</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contacto</a></li>
+        </li>
+        <li><a href="login.html" class="btn btn-success">Login</a></li>
+        <li><a href="signup.html" class="btn btn-success">Sign out</a></li>
 
+      </ul>
+    </div>
 
-  <div class="w3-row-padding" id="about">
-    <div class="w3-col l4 12">
-      <h3>About</h3>
-      <h6>Our hotel is one of a kind. It is truely amazing. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</h6>
-    <p>We accept: <i class="fa fa-credit-card w3-large"></i> <i class="fa fa-cc-mastercard w3-large"></i> <i class="fa fa-cc-amex w3-large"></i> <i class="fa fa-cc-cc-visa w3-large"></i><i class="fa fa-cc-paypal w3-large"></i></p>
+  <div class="w3-row-padding" id="about" >
+    <div align="center">
+      <h3>Acerca de</h3>
+      </center><h6>Somos una empresa web que lo que busca es ser reconocidos como una organización líder en retorno social, que hace aportaciones decisivas a la construcción de un México más próspero, en el que las personas desarrollan competencias económicas para fortalecer su patrimonio y colaborar al progreso nacional. Un México más incluyente, con una mejor calidad de vida para todos a través de la educación, el empleo y la salud. Un México más consciente de la importancia de la conservación ambiental. Un México orgulloso de sus valores e identidad, que preserva su patrimonio artístico y lo comparte con el mundo.</h6>
+    <p>Se aceptan: <i class="fa fa-credit-card w3-large"></i> <i class="fa fa-cc-mastercard w3-large"></i> <i class="fa fa-cc-amex w3-large"></i> <i class="fa fa-cc-cc-visa w3-large"></i><i class="fa fa-cc-paypal w3-large"></i></p>
     </div>
     <div class="w3-col l8 12">
       <!-- Image of location/map -->
-      <img src="/w3images/map.jpg" class="w3-image w3-greyscale" style="width:100%;">
+      <!--<img src="/w3images/map.jpg" class="w3-image w3-greyscale" style="width:100%;">-->
     </div>
   </div>
   
   <div class="w3-row-padding w3-large w3-center" style="margin:32px 0">
-    <div class="w3-third"><i class="fa fa-map-marker w3-text-red"></i> 423 Some adr, Chicago, US</div>
-    <div class="w3-third"><i class="fa fa-phone w3-text-red"></i> Phone: +00 151515</div>
-    <div class="w3-third"><i class="fa fa-envelope w3-text-red"></i> Email: mail@mail.com</div>
+    <div class="w3-third"><i class="fa fa-map-marker w3-text-red"></i> Tijuana B.C </div>
+    <div class="w3-third"><i class="fa fa-phone w3-text-red"></i> Phone: 664-345-52-13 </div>
+    <div class="w3-third"><i class="fa fa-envelope w3-text-red"></i> Email: Fakemoney_banck@mail.com</div>
   </div>
 
   <div class="w3-panel w3-red w3-leftbar w3-padding-32">
-    <h6><i class="fa fa-info w3-deep-orange w3-padding w3-margin-right"></i> On demand, we can offer playstation, babycall, children care, dog equipment, etc.</h6>
+    <h6><i class="fa fa-info w3-deep-orange w3-padding w3-margin-right"></i> fakemoney autoriza solamente movientos mediante plataforma web, por medidas de sanitizacion del COVID-19.</h6>
   </div>
 
 <!-- End page content -->
