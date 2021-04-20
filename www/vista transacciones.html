@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<title>
+Tabla de transacciones y detinatarios
+</title>
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+<head>
+<style>
+#tabla {
+position: absolute;
+top: 390px;
+right: 20px;
+}
+#Dtusu {
+position: absolute;
+top: 10px;
+width: 1350px; 
+height: 60px;
+}
+#T1 {
+position: absolute;
+top: 80px;
+right: 500px;
+font-family: arial, sans-serif;
+border-collapse: collapse;
+}
+#T2 {
+position: absolute;
+top: 80px;
+left: 400px;
+font-family: arial, sans-serif;
+border-collapse: collapse;
+}
+#fake {
+position: absolute;
+top: 620px;
+width: 1350px; 
+height: 60px;
+
+}
+#powered {
+position: absolute;
+top: 670px;
+left: 525px;
+width: 350px; 
+height: 60px;
+
+}
+
+
+</style>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/css/w3.css">
+<link rel="stylesheet" href="/css/w3-ext.css">
+<link rel="stylesheet" href="/css/w3-theme-blue-grey.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+<script src="/js/fakemoney.js"></script>
+<script src="/js/w3.js"></script>
+<script src="/js/w3-custom.js"></script>
+
+</head>
+
+<body>
+
+ <div id="Dtusu">
+		<!-- Footer -->
+		<footer class="w3-container w3-theme-d3 w3-padding-80" align="center"  >
+			<h5>Datos del Usuario</h5>
+		</footer>
+			<script> w3.includeHTML(includeHTMLCallback) </script>
+	 </div>
+<!--- tabla datos del usuario -->
+		<div id="T1"> 
+<table div id="datos"   CELLPADDING=1 CELLSPACING=20 class="w3-table w3-striped w3-bordered">
+
+  <tr>
+    <td>{{Nombre}}</td>
+  </tr>
+  <tr>
+    <td>{{Número de cuenta}}</td>
+  </tr>
+  <tr>
+    <td>{{Cuenta clabe}}</td>
+  </tr>
+ <tr>
+    <td>{{Banco}}</td>
+  </tr>
+  <tr>
+    <td>{{Saldo actual}}</td>
+  </tr>
+  <tr>
+    <td>{{Celular asociado}}</td>
+  </tr>
+</div> <!-- cierre para el script--> 
+	
+</table>
+
+	 </div><!-- cierre de Div de style--> 
+	
+	
+		<script>
+			var myObject= {"Nombre" : "Jose Villalobos Martinez", "Número de cuenta" : "16853138645614","Cuenta clabe": "458612345698754215", 
+							"Banco" : "Banamex", "Saldo actual" : "1316.48", "Celular asociado" : "6644685124"};
+			w3.displayObject("datos", myObject);
+		</script>
+		
+		
+		<div id="T2"> 
+<table div id="datos"   CELLPADDING=1 CELLSPACING=20  class="w3-table w3-striped w3-bordered">
+
+  <tr>
+    <td>Nombre:</td>
+  </tr>
+  <tr>
+    <td>Número de cuenta:</td>
+  </tr>
+  <tr>
+    <td>Cuenta clabe:</td>
+  </tr>
+ <tr>
+    <td>Banco:</td>
+  </tr>
+  <tr>
+    <td>Saldo actual:</td>
+	</tr>
+  <tr>
+    <td>Celular asociado:</td>
+  </tr>
+	
+</table>
+		</div>
+		
+		
+<!---Div para el style -->
+	<div id="tabla"> 
+
+<table class="w3-table w3-striped w3-bordered" div id="Tabla_visualizar_transacciones" BORDER=3 CELLPADDING=10 CELLSPACING=10>
+    <tr class="w3-theme-d2">
+        <th class="w3-hide-small">ID Transaccion</th>
+        <th>Concepto</th>
+        <th>Direccion</th>
+        <th>Monto</th>
+        <th>Banco</th>
+		<th>Destinatario</th>
+		<th>Fecha de deposito</th>
+		<th>Numero de transacciones </th>
+    </tr>
+	<tr>
+	  <th class="w3-hide-small">{{ID}}</th>
+        <th>{{Concepto}}</th>
+		<th>{{Direccion}}</th>
+		<th>{{Monto}}</th>
+        <th>{{Banco}}</th>
+        <th>{{Destinatario}}</th>
+        <th>{{Fecha de deposito}}</th>
+		<th>{{Número de transacciones}}</th>
+	</tr>
+	<tr>
+		<th class="w3-hide-small">{{ID}}</th>
+        <th>{{Concepto}}</th>
+		<th>{{Direccion}}</th>
+		<th>{{Monto}}</th>
+        <th>{{Banco}}</th>
+        <th>{{Destinatario}}</th>
+        <th>{{Fecha de deposito}}</th>
+		<th>{{Número de transacciones}}</th>
+	</tr>
+	<tr>
+		<th class="w3-hide-small">{{ID}}</th>
+        <th>{{Concepto}}</th>
+		<th>{{Direccion}}</th>
+		<th>{{Monto}}</th>
+        <th>{{Banco}}</th>
+        <th>{{Destinatario}}</th>
+        <th>{{Fecha de deposito}}</th>
+		<th>{{Número de transacciones}}</th>
+	</tr>
+	<tr>
+		<th class="w3-hide-small">{{ID}}</th>
+        <th>{{Concepto}}</th>
+		<th>{{Direccion}}</th>
+		<th>{{Monto}}</th>
+        <th>{{Banco}}</th>
+        <th>{{Destinatario}}</th>
+        <th>{{Fecha de deposito}}</th>
+		<th>{{Número de transacciones}}</th>
+	</tr>	
+            
+       
+	</div> <!-- cierre para el script--> 
+	
+</table>
+
+	 </div><!-- cierre de Div de style--> 
+	
+	
+		<script>
+			var myObject= {"ID" : "1", "Concepto" : "Pago universitario","Direccion": "El refugio, Tijuana, B.C, México", "Monto": "2800", "Banco" : "Banamex", "Destinatario" : "Banco azteca"
+							, "Fecha de deposito" : "10/4/21", "Número de transacciones" : "31"};
+			w3.displayObject("Tabla_visualizar_transacciones", myObject);
+		</script>
+		
+	 <div id="fake">
+		<!-- Footer -->
+		<footer class="w3-container w3-theme-d3 w3-padding-80" align="center"  >
+			<h5>Fakemoney</h5>
+		</footer>
+			<script> w3.includeHTML(includeHTMLCallback) </script>
+	 </div>
+
+<div id="powered">
+						<!-- Footer2 -->
+		<footer class="w3-container w3-padding-32 w3-light-grey w3-center w3-xlarge">
+			<div class="w3-section">
+				<i class="fab fa-github w3-hover-opacity"></i>
+				<i class="fab fa-linkedin w3-hover-opacity"></i>
+			</div>
+			<p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+		</footer>
+</div>
+
+</body>
+</html> 
