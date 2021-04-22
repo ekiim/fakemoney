@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>QR view</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/css/w3.css">
+<link rel="stylesheet" href="/css/w3-ext.css">
+<link rel="stylesheet" href="/css/w3-theme-blue-grey.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+<script src="/js/fakemoney.js"></script>
+<script src="/js/qrcode.js"></script>
+<script src="/js/w3.js"></script>
+<script src="/js/w3-custom.js"></script>
+<style>
+#qr_container > * { margin: 0 auto; max-width: 100%; max-height: 200px;}
+#qr_container > img { display: inline !important; }
+#qr_input {
+	margin: 16px;
+}
+</style>
+</head>
+<body>
+<!-- Navbar -->
+<div class="w3-top" w3-include-html="/components/auth-topnav.html"></div>
+
+<!-- Page Container -->
+<main class="w3-container w3-content" style="max-width:1400px;margin-top:80px;">
+    <div class="w3-row">
+        <div class="w3-rest"><span></span></div>
+        <div class="w3-col l4 m6 s12">
+          <div class="w3-card w3-round w3-padding w3-center">
+            <div id="qr_container"></div>
+			<input type="text" id="qr_input"/>
+          </div>
+        </div>
+        <div class="w3-rest"><span></span></div>
+    </div>
+<!-- End Page Container -->
+</main>
+<br>
+
+<!-- Footer -->
+<footer class="w3-container w3-theme-d3 w3-padding-16">
+  <h5>Fakemoney</h5>
+</footer>
+ <script src="https://unpkg.com/html5-qrcode/minified/html5-qrcode.min.js"></script>
+ <div id="qr-reader" style="width:500px"></div>
+<div id="qr-reader-results"></div>
+<script>
+var resultContainer = document.getElementById('qr-reader-results');
+var lastResult, countResults = 0;
+
+function onScanSuccess(qrCodeMessage) {
+    if (qrCodeMessage !== lastResult) {
+        ++countResults;
+        lastResult = qrCodeMessage;
+        resultContainer.innerHTML 
+            += `<div>[${countResults}] - ${qrCodeMessage}</div>`; 
+    }
+} </script>
+ 
+ <script> var html5QrcodeScanner = new Html5QrcodeScanner(
+    "qr-reader", { fps: 10, qrbox: 250 });
+html5QrcodeScanner.render(onScanSuccess);
+</script>
+</script>
+</script>
+
+</body>
+</html> 
